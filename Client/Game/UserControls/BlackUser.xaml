@@ -1,0 +1,531 @@
+﻿<UserControl x:Class="Client.Game.UserControls.BlackUser"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Client.Game.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid x:Name="gameGrid" Grid.Row="1" Grid.Column="0" ShowGridLines="False">
+        <Grid.Background>
+            <ImageBrush ImageSource ="../../Images/background.png"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="16"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="16"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="13"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="40"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="12"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <!--Bottom Left-->
+        <StackPanel Name="sp1" Orientation="Vertical" Grid.Row="8" Grid.Column="1" 
+                        Grid.RowSpan="5" VerticalAlignment="Bottom" HorizontalAlignment="Center" MouseLeftButtonDown="Sp1_MouseLeftButtonDown">
+            <ItemsControl  ItemsSource="{Binding Path=ListAllCollections[0]}" >
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Ellipse Height="44.5" Width="44" Margin="0" Fill="{Binding Color}"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+        <StackPanel Name="sp2" Orientation="Vertical" Grid.Row="8" Grid.Column="2" 
+                        Grid.RowSpan="5" VerticalAlignment="Bottom" HorizontalAlignment="Center" MouseLeftButtonDown="Sp2_MouseLeftButtonDown">
+            <ItemsControl  ItemsSource="{Binding Path=ListAllCollections[1]}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Ellipse Height="44.5" Width="44" Margin="0" Fill="{Binding Color}"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+        <StackPanel Name="sp3" Orientation="Vertical" Grid.Row="8" Grid.Column="3" 
+                        Grid.RowSpan="5" VerticalAlignment="Bottom" HorizontalAlignment="Center" MouseLeftButtonDown="Sp3_MouseLeftButtonDown">
+            <ItemsControl  ItemsSource="{Binding Path=ListAllCollections[2]}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Ellipse Height="44.5" Width="44" Margin="0" Fill="{Binding Color}"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+        <StackPanel Name="sp4" Orientation="Vertical" Grid.Row="8" Grid.Column="4" 
+                        Grid.RowSpan="5" VerticalAlignment="Bottom" HorizontalAlignment="Center" MouseLeftButtonDown="Sp4_MouseLeftButtonDown">
+            <ItemsControl  ItemsSource="{Binding Path=ListAllCollections[3]}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Ellipse Height="44.5" Width="44" Margin="0" Fill="{Binding Color}"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+        <StackPanel Name="sp5" Orientation="Vertical" Grid.Row="8" Grid.Column="5" 
+                        Grid.RowSpan="5" VerticalAlignment="Bottom" HorizontalAlignment="Center" MouseLeftButtonDown="Sp5_MouseLeftButtonDown">
+            <ItemsControl  ItemsSource="{Binding Path=ListAllCollections[4]}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Ellipse Height="44.5" Width="44" Margin="0" Fill="{Binding Color}"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+        <StackPanel Name="sp6" Orientation="Vertical" Grid.Row="8" Grid.Column="6" 
+                        Grid.RowSpan="5" VerticalAlignment="Bottom" HorizontalAlignment="Center" MouseLeftButtonDown="Sp6_MouseLeftButtonDown">
+            <ItemsControl  ItemsSource="{Binding Path=ListAllCollections[5]}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Ellipse Height="44.5" Width="44" Margin="0" Fill="{Binding Color}"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+        <!--Bar Top-->
+        <StackPanel Name="blackBar" Orientation="Vertical" Grid.Row="7" Grid.Column="7" 
+                        Grid.RowSpan="6" VerticalAlignment="Top" HorizontalAlignment="Center"
+                    MouseLeftButtonDown="BlackBar_MouseLeftButtonDown">
+            <ItemsControl  ItemsSource="{Binding Path=BlackBar}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Ellipse Height="35" Width="35" Margin="0" Fill="{Binding Color}"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+        <!--Bottom Right-->
+        <StackPanel Name="sp7" Orientation="Vertical" Grid.Row="8" Grid.Column="8" 
+                        Grid.RowSpan="5" VerticalAlignment="Bottom" HorizontalAlignment="Center" 
+                        MouseLeftButtonDown="Sp7_MouseLeftButtonDown">
+            <ItemsControl  ItemsSource="{Binding Path=ListAllCollections[6]}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Ellipse Height="44.5" Width="44" Margin="0" Fill="{Binding Color}"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+        <StackPanel Name="sp8" Orientation="Vertical" Grid.Row="8" Grid.Column="9" 
+                        Grid.RowSpan="5" VerticalAlignment="Bottom" HorizontalAlignment="Center"
+                        MouseLeftButtonDown="Sp8_MouseLeftButtonDown">
+            <ItemsControl  ItemsSource="{Binding Path=ListAllCollections[7]}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Ellipse Height="44.5" Width="44" Margin="0" Fill="{Binding Color}"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+        <StackPanel Name="sp9" Orientation="Vertical" Grid.Row="8" Grid.Column="10" 
+                        Grid.RowSpan="5" VerticalAlignment="Bottom" HorizontalAlignment="Center"
+                        MouseLeftButtonDown="Sp9_MouseLeftButtonDown">
+            <ItemsControl  ItemsSource="{Binding Path=ListAllCollections[8]}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Ellipse Height="44.5" Width="44" Margin="0" Fill="{Binding Color}"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+        <StackPanel Name="sp10" Orientation="Vertical" Grid.Row="8" Grid.Column="11" 
+                        Grid.RowSpan="5" VerticalAlignment="Bottom" HorizontalAlignment="Center"
+                        MouseLeftButtonDown="Sp10_MouseLeftButtonDown">
+            <ItemsControl  ItemsSource="{Binding Path=ListAllCollections[9]}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Ellipse Height="44.5" Width="44" Margin="0" Fill="{Binding Color}"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+        <StackPanel Name="sp11" Orientation="Vertical" Grid.Row="8" Grid.Column="12" 
+                        Grid.RowSpan="5" VerticalAlignment="Bottom" HorizontalAlignment="Center"
+                        MouseLeftButtonDown="Sp11_MouseLeftButtonDown">
+            <ItemsControl  ItemsSource="{Binding Path=ListAllCollections[10]}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Ellipse Height="44.5" Width="44" Margin="0" Fill="{Binding Color}"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+        <StackPanel Name="sp12" Orientation="Vertical" Grid.Row="8" Grid.Column="13" 
+                        Grid.RowSpan="5" VerticalAlignment="Bottom" HorizontalAlignment="Center"
+                        MouseLeftButtonDown="Sp12_MouseLeftButtonDown">
+            <ItemsControl  ItemsSource="{Binding Path=ListAllCollections[11]}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Ellipse Height="44.5" Width="44" Margin="0" Fill="{Binding Color}"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+        <!--Top Right-->
+        <StackPanel Name="sp13" Orientation="Vertical" Grid.Row="1" Grid.Column="13" 
+                        Grid.RowSpan="5" VerticalAlignment="Top" HorizontalAlignment="Center"
+                        MouseLeftButtonDown="Sp13_MouseLeftButtonDown">
+            <ItemsControl  ItemsSource="{Binding Path=ListAllCollections[12]}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Ellipse Height="44.5" Width="44" Margin="0" Fill="{Binding Color}"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+        <StackPanel Name="sp14" Orientation="Vertical" Grid.Row="1" Grid.Column="12" 
+                        Grid.RowSpan="5" VerticalAlignment="Top" HorizontalAlignment="Center"
+                        MouseLeftButtonDown="Sp14_MouseLeftButtonDown">
+            <ItemsControl  ItemsSource="{Binding Path=ListAllCollections[13]}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Ellipse Height="44.5" Width="44" Margin="0" Fill="{Binding Color}"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+        <StackPanel Name="sp15" Orientation="Vertical" Grid.Row="1" Grid.Column="11" 
+                        Grid.RowSpan="5" VerticalAlignment="Top" HorizontalAlignment="Center"
+                        MouseLeftButtonDown="Sp15_MouseLeftButtonDown">
+            <ItemsControl  ItemsSource="{Binding Path=ListAllCollections[14]}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Ellipse Height="44.5" Width="44" Margin="0" Fill="{Binding Color}"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+        <StackPanel Name="sp16" Orientation="Vertical" Grid.Row="1" Grid.Column="10" 
+                        Grid.RowSpan="5" VerticalAlignment="Top" HorizontalAlignment="Center"
+                        MouseLeftButtonDown="Sp16_MouseLeftButtonDown">
+            <ItemsControl  ItemsSource="{Binding Path=ListAllCollections[15]}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Ellipse Height="44.5" Width="44" Margin="0" Fill="{Binding Color}"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+        <StackPanel Name="sp17" Orientation="Vertical" Grid.Row="1" Grid.Column="9" 
+                        Grid.RowSpan="5" VerticalAlignment="Top" HorizontalAlignment="Center"
+                        MouseLeftButtonDown="Sp17_MouseLeftButtonDown">
+            <ItemsControl  ItemsSource="{Binding Path=ListAllCollections[16]}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Ellipse Height="44.5" Width="44" Margin="0" Fill="{Binding Color}"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+        <StackPanel Name="sp18" Orientation="Vertical" Grid.Row="1" Grid.Column="8" 
+                        Grid.RowSpan="5" VerticalAlignment="Top" HorizontalAlignment="Center"
+                        MouseLeftButtonDown="Sp18_MouseLeftButtonDown">
+            <ItemsControl  ItemsSource="{Binding Path=ListAllCollections[17]}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Ellipse Height="44.5" Width="44" Margin="0" Fill="{Binding Color}"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+        <!--Bar Bottom-->
+        <StackPanel Name="whiteBar" Orientation="Vertical" Grid.Row="1" Grid.Column="7" 
+                        Grid.RowSpan="6" VerticalAlignment="Bottom" HorizontalAlignment="Center">
+            <ItemsControl  ItemsSource="{Binding Path=WhiteBar}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Ellipse Height="35" Width="35" Margin="0" Fill="{Binding Color}"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+        <!--Top Left-->
+        <StackPanel Name="sp19" Orientation="Vertical" Grid.Row="1" Grid.Column="6" 
+                        Grid.RowSpan="5" VerticalAlignment="Top" HorizontalAlignment="Center"
+                        MouseLeftButtonDown="Sp19_MouseLeftButtonDown">
+            <ItemsControl  ItemsSource="{Binding Path=ListAllCollections[18]}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Ellipse Height="44.5" Width="44" Margin="0" Fill="{Binding Color}"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+        <StackPanel Name="sp20" Orientation="Vertical" Grid.Row="1" Grid.Column="5" 
+                        Grid.RowSpan="5" VerticalAlignment="Top" HorizontalAlignment="Center"
+                        MouseLeftButtonDown="Sp20_MouseLeftButtonDown">
+            <ItemsControl  ItemsSource="{Binding Path=ListAllCollections[19]}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Ellipse Height="44.5" Width="44" Margin="0" Fill="{Binding Color}"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+        <StackPanel Name="sp21" Orientation="Vertical" Grid.Row="1" Grid.Column="4" 
+                        Grid.RowSpan="5" VerticalAlignment="Top" HorizontalAlignment="Center"
+                        MouseLeftButtonDown="Sp21_MouseLeftButtonDown">
+            <ItemsControl  ItemsSource="{Binding Path=ListAllCollections[20]}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Ellipse Height="44.5" Width="44" Margin="0" Fill="{Binding Color}"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+        <StackPanel Name="sp22" Orientation="Vertical" Grid.Row="1" Grid.Column="3" 
+                        Grid.RowSpan="5" VerticalAlignment="Top" HorizontalAlignment="Center"
+                        MouseLeftButtonDown="Sp22_MouseLeftButtonDown">
+            <ItemsControl  ItemsSource="{Binding Path=ListAllCollections[21]}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Ellipse Height="44.5" Width="44" Margin="0" Fill="{Binding Color}"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+        <StackPanel Name="sp23" Orientation="Vertical" Grid.Row="1" Grid.Column="2" 
+                        Grid.RowSpan="5" VerticalAlignment="Top" HorizontalAlignment="Center"
+                        MouseLeftButtonDown="Sp23_MouseLeftButtonDown">
+            <ItemsControl  ItemsSource="{Binding Path=ListAllCollections[22]}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Ellipse Height="44.5" Width="44" Margin="0" Fill="{Binding Color}"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+        <StackPanel Name="sp24" Orientation="Vertical" Grid.Row="1" Grid.Column="1" 
+                        Grid.RowSpan="5" VerticalAlignment="Top" HorizontalAlignment="Center"
+                        MouseLeftButtonDown="Sp24_MouseLeftButtonDown">
+            <ItemsControl  ItemsSource="{Binding Path=ListAllCollections[23]}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Ellipse Height="44.5" Width="44" Margin="0" Fill="{Binding Color}"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+
+        <!--Left Bottom Counters-->
+        <TextBlock x:Name="counter1" Grid.Row="12" Grid.Column="1" 
+                   Foreground="Black" TextAlignment="Center" VerticalAlignment="Center"
+                   FontSize="25" Panel.ZIndex="-100" FontWeight="Bold"/>
+        <TextBlock x:Name="counter2" Grid.Row="12" Grid.Column="2" 
+                   Foreground="Black" TextAlignment="Center" VerticalAlignment="Center"
+                   FontSize="25" Panel.ZIndex="-100" FontWeight="Bold"/>
+        <TextBlock x:Name="counter3" Grid.Row="12" Grid.Column="3" 
+                   Foreground="Black" TextAlignment="Center" VerticalAlignment="Center"
+                   FontSize="25" Panel.ZIndex="-100" FontWeight="Bold"/>
+        <TextBlock x:Name="counter4" Grid.Row="12" Grid.Column="4" 
+                   Foreground="Black" TextAlignment="Center" VerticalAlignment="Center"
+                   FontSize="25" Panel.ZIndex="-100" FontWeight="Bold"/>
+        <TextBlock x:Name="counter5" Grid.Row="12" Grid.Column="5" 
+                   Foreground="Black" TextAlignment="Center" VerticalAlignment="Center"
+                   FontSize="25" Panel.ZIndex="-100" FontWeight="Bold"/>
+        <TextBlock x:Name="counter6" Grid.Row="12" Grid.Column="6" 
+                   Foreground="Black" TextAlignment="Center" VerticalAlignment="Center"
+                   FontSize="25" Panel.ZIndex="-100" FontWeight="Bold"/>
+        <!--Right Bottom Counters-->
+        <TextBlock x:Name="counter7" Grid.Row="13" Grid.Column="8" 
+                   Foreground="Black" TextAlignment="Center" VerticalAlignment="Center"
+                   FontSize="25" Panel.ZIndex="-100" FontWeight="Bold"/>
+        <TextBlock x:Name="counter8" Grid.Row="12" Grid.Column="9" 
+                   Foreground="Black" TextAlignment="Center" VerticalAlignment="Center"
+                   FontSize="25" Panel.ZIndex="-100" FontWeight="Bold"/>
+        <TextBlock x:Name="counter9" Grid.Row="12" Grid.Column="10" 
+                   Foreground="Black" TextAlignment="Center" VerticalAlignment="Center"
+                   FontSize="25" Panel.ZIndex="-100" FontWeight="Bold"/>
+        <TextBlock x:Name="counter10" Grid.Row="12" Grid.Column="11" 
+                   Foreground="Black" TextAlignment="Center" VerticalAlignment="Center"
+                   FontSize="25" Panel.ZIndex="-100" FontWeight="Bold"/>
+        <TextBlock x:Name="counter11" Grid.Row="12" Grid.Column="12" 
+                   Foreground="Black" TextAlignment="Center" VerticalAlignment="Center"
+                   FontSize="25" Panel.ZIndex="-100" FontWeight="Bold"/>
+        <TextBlock x:Name="counter12" Grid.Row="12" Grid.Column="13" 
+                   Foreground="Black" TextAlignment="Center" VerticalAlignment="Center"
+                   FontSize="25" Panel.ZIndex="-100" FontWeight="Bold"/>
+        <!--Right Top Counters-->
+        <TextBlock x:Name="counter13" Grid.Row="1" Grid.Column="13" 
+                   Foreground="Black" TextAlignment="Center" VerticalAlignment="Center"
+                   FontSize="25" Panel.ZIndex="-100" FontWeight="Bold"/>
+        <TextBlock x:Name="counter14" Grid.Row="1" Grid.Column="12" 
+                   Foreground="Black" TextAlignment="Center" VerticalAlignment="Center"
+                   FontSize="25" Panel.ZIndex="-100" FontWeight="Bold"/>
+        <TextBlock x:Name="counter15" Grid.Row="1" Grid.Column="11" 
+                   Foreground="Black" TextAlignment="Center" VerticalAlignment="Center"
+                  FontSize="25" Panel.ZIndex="-100" FontWeight="Bold"/>
+        <TextBlock x:Name="counter16" Grid.Row="1" Grid.Column="10" 
+                   Foreground="Black" TextAlignment="Center" VerticalAlignment="Center"
+                   FontSize="25" Panel.ZIndex="-100" FontWeight="Bold"/>
+        <TextBlock x:Name="counter17" Grid.Row="1" Grid.Column="9" 
+                   Foreground="Black" TextAlignment="Center" VerticalAlignment="Center"
+                  FontSize="25" Panel.ZIndex="-100" FontWeight="Bold"/>
+        <TextBlock x:Name="counter18" Grid.Row="1" Grid.Column="8" 
+                   Foreground="Black" TextAlignment="Center" VerticalAlignment="Center"
+                   FontSize="25" Panel.ZIndex="-100" FontWeight="Bold"/>
+        <!--Right Bottom Counters-->
+        <TextBlock x:Name="counter19" Grid.Row="1" Grid.Column="6" 
+                   Foreground="Black" TextAlignment="Center" VerticalAlignment="Center"
+                   FontSize="25" Panel.ZIndex="-100" FontWeight="Bold"/>
+        <TextBlock x:Name="counter20" Grid.Row="1" Grid.Column="5" 
+                   Foreground="Black" TextAlignment="Center" VerticalAlignment="Center"
+                   FontSize="25" Panel.ZIndex="-100" FontWeight="Bold"/>
+        <TextBlock x:Name="counter21" Grid.Row="1" Grid.Column="4" 
+                   Foreground="Black" TextAlignment="Center" VerticalAlignment="Center"
+                   FontSize="25" Panel.ZIndex="-100" FontWeight="Bold"/>
+        <TextBlock x:Name="counter22" Grid.Row="1" Grid.Column="3" 
+                   Foreground="Black" TextAlignment="Center" VerticalAlignment="Center"
+                   FontSize="25" Panel.ZIndex="-100" FontWeight="Bold"/>
+        <TextBlock x:Name="counter23" Grid.Row="1" Grid.Column="2" 
+                   Foreground="Black" TextAlignment="Center" VerticalAlignment="Center"
+                   FontSize="25" Panel.ZIndex="-100" FontWeight="Bold"/>
+        <TextBlock x:Name="counter24" Grid.Row="1" Grid.Column="1" 
+                   Foreground="Black" TextAlignment="Center" VerticalAlignment="Center"
+                   FontSize="25" Panel.ZIndex="-100" FontWeight="Bold"/>
+
+
+        <!--Start arow navigation-->
+        <Path Fill="Yellow" Stroke="White" Grid.Column="2" Grid.Row="6"  Grid.ColumnSpan="3">
+            <Path.Data>
+                <LineGeometry StartPoint = "0,22" EndPoint = "1500, 20"></LineGeometry>
+            </Path.Data>
+        </Path>
+        
+        <!--Arow To Right start-->
+        <Path Fill="Yellow" Stroke="White" Grid.Column="5" Grid.Row="6">
+            <Path.Data>
+                <LineGeometry StartPoint = "0,1" EndPoint = "100, 45"></LineGeometry>
+            </Path.Data>
+        </Path>
+        <Path Fill="Yellow" Stroke="White" Grid.Column="5" Grid.Row="6" >
+            <Path.Data>
+                <LineGeometry StartPoint = "0,22" EndPoint = "1500, 20"></LineGeometry>
+            </Path.Data>
+        </Path>
+        <Path Fill="Gray" Stroke="White" Grid.Column="5" Grid.Row="6">
+            <Path.Data>
+                <LineGeometry StartPoint = "0,44" EndPoint = "100, 0"></LineGeometry>
+            </Path.Data>
+        </Path>
+        <!--Arow to Right end-->
+        
+        <Path Fill="Yellow" Stroke="White" Grid.Column="9" Grid.Row="6"  Grid.ColumnSpan="3">
+            <Path.Data>
+                <LineGeometry StartPoint = "0,22" EndPoint = "1500, 20"></LineGeometry>
+            </Path.Data>
+        </Path>
+        
+        <!--Arow To Right start-->      
+        <Path Fill="Yellow" Stroke="White" Grid.Column="11" Grid.Row="6">
+            <Path.Data>
+                <LineGeometry StartPoint = "0,1" EndPoint = "100, 45"></LineGeometry>
+            </Path.Data>
+        </Path>
+        <Path Fill="Yellow" Stroke="White" Grid.Column="11" Grid.Row="6" >
+            <Path.Data>
+                <LineGeometry StartPoint = "0,22" EndPoint = "1500, 20"></LineGeometry>
+            </Path.Data>
+        </Path>
+        <Path Fill="Gray" Stroke="White" Grid.Column="11" Grid.Row="6">
+            <Path.Data>
+                <LineGeometry StartPoint = "0,44" EndPoint = "100, 0"></LineGeometry>
+            </Path.Data>
+        </Path>
+        <!--Arow to Right end-->
+        
+        <!--turn start-->
+        <Path Fill="Yellow" Stroke="White" Grid.Column="13" Grid.Row="6" >
+            <Path.Data>
+                <LineGeometry StartPoint = "0,22" EndPoint = "22, 22"></LineGeometry>
+            </Path.Data>
+        </Path>
+        <Path Fill="Yellow" Stroke="White" Grid.Column="13" Grid.Row="6" >
+            <Path.Data>
+                <LineGeometry StartPoint = "22, 22" EndPoint = "22,400"></LineGeometry>
+            </Path.Data>
+        </Path>
+        <Path Fill="Yellow" Stroke="White" Grid.Column="13" Grid.Row="7" >
+            <Path.Data>
+                <LineGeometry StartPoint = "22, 22" EndPoint = "22,0"></LineGeometry>
+            </Path.Data>
+        </Path>
+        <Path Fill="Yellow" Stroke="White" Grid.Column="13" Grid.Row="7">
+            <Path.Data>
+                <LineGeometry StartPoint = "0,22" EndPoint = "22, 22"></LineGeometry>
+            </Path.Data>
+        </Path>
+        <!--turn end-->
+        
+        <!--Arow To Left start-->
+        <Path Fill="Yellow" Stroke="White" Grid.Column="2" Grid.Row="7">
+            <Path.Data>
+                <LineGeometry StartPoint = "0,22" EndPoint = "180, 100"></LineGeometry>
+            </Path.Data>
+        </Path>
+        <Path Fill="Yellow" Stroke="White" Grid.Column="2" Grid.Row="7" >
+            <Path.Data>
+                <LineGeometry StartPoint = "0,22" EndPoint = "1500, 20"></LineGeometry>
+            </Path.Data>
+        </Path>
+        <Path Fill="Gray" Stroke="White" Grid.Column="2" Grid.Row="7">
+            <Path.Data>
+                <LineGeometry StartPoint = "0,22" EndPoint = "70, -10"></LineGeometry>
+            </Path.Data>
+        </Path>
+        <!--Arow to Left end-->
+
+
+        <!--Arow To Left start-->
+        <Path Fill="Yellow" Stroke="White" Grid.Column="9" Grid.Row="7">
+            <Path.Data>
+                <LineGeometry StartPoint = "0,22" EndPoint = "180, 100"></LineGeometry>
+            </Path.Data>
+        </Path>
+        <Path Fill="Yellow" Stroke="White" Grid.Column="9" Grid.Row="7" >
+            <Path.Data>
+                <LineGeometry StartPoint = "0,22" EndPoint = "1500, 20"></LineGeometry>
+            </Path.Data>
+        </Path>
+        <Path Fill="Gray" Stroke="White" Grid.Column="9" Grid.Row="7">
+            <Path.Data>
+                <LineGeometry StartPoint = "0,22" EndPoint = "70, -10"></LineGeometry>
+            </Path.Data>
+        </Path>
+        <!--Arow to Left end-->
+        <Path Fill="Yellow" Stroke="White" Grid.Column="3" Grid.Row="7"  Grid.ColumnSpan="3">
+            <Path.Data>
+                <LineGeometry StartPoint = "0,22" EndPoint = "1500,20"></LineGeometry>
+            </Path.Data>
+        </Path>
+
+        <Path Fill="Yellow" Stroke="White" Grid.Column="10" Grid.Row="7"  Grid.ColumnSpan="2">
+            <Path.Data>
+                <LineGeometry StartPoint = "0,22" EndPoint = "1500, 20"></LineGeometry>
+            </Path.Data>
+        </Path>
+    </Grid>
+
+</UserControl>

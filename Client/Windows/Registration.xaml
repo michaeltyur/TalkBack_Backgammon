@@ -1,0 +1,82 @@
+﻿<Window x:Class="Client.Windows.Registration"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Client.Windows"
+        mc:Ignorable="d"
+        WindowStyle="None" MouseLeftButtonDown="Window_MouseLeftButtonDown"
+        Title="Registration" Height="500" Width="300" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Border BorderBrush="Black" BorderThickness="2" CornerRadius="3" >
+        <Grid ShowGridLines="False" Background="BlueViolet" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="90"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="2*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="2*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="2*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="2*"></RowDefinition>
+                <RowDefinition Height="60"></RowDefinition>
+            </Grid.RowDefinitions>
+            <StackPanel  x:Name="topHeader" VerticalAlignment="Top"  Orientation="Horizontal" Height="30"
+                     Background="DarkViolet" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
+                <Button x:Name="topMenuButton" Width="60" Click="TopMenuButton_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource ="../Images/top_menu.jpg"/>
+                    </Button.Background>
+                    <Button.ContextMenu>
+                        <ContextMenu x:Name="topMenu">
+                            <MenuItem Header="Help" >
+                                <MenuItem  Header="How to Play" Padding="-20">
+                                    <TextBlock x:Name="howToLogin" Margin="0" Width="250" Background="LightGray" Padding="5" TextWrapping="Wrap"/>
+                                </MenuItem>
+                                <MenuItem Header="About">
+                                    <TextBlock x:Name="about" Width="200" Background="LightGray" Padding="5" TextWrapping="Wrap"/>
+                                </MenuItem>
+                            </MenuItem>
+                            <MenuItem x:Name="topMenuRegButton" Header="Registration" Click="RegButton_Click"/>
+                            <MenuItem x:Name="topMenuBackButton" Header="Back" Click="BackButton_Click"/>
+                            <Separator />
+                            <MenuItem Header="Exit" Click="CloseButton_Click"/>
+                        </ContextMenu>
+                    </Button.ContextMenu>
+                </Button>
+                <TextBlock  FontWeight="Bold" Width="101" Text="Talk Back"
+                      x:Name="titleCenter" TextAlignment="Right" FontSize="15" VerticalAlignment="Center"/>
+                <TextBlock x:Name="titleHours" Text="{Binding Path=Hour}" Width="30" TextAlignment="Right" FontSize="15" FontWeight="Bold" VerticalAlignment="Center" Margin="0,0,0,5"/>
+                <TextBlock x:Name="titleSecond" Text="{Binding Path=Seconds}" Width="5" TextAlignment="Center" FontSize="15" VerticalAlignment="Center" Margin="0,0,0,5"/>
+                <TextBlock x:Name="titleMinutes" Text="{Binding Path=Minutes}" Width="40" TextAlignment="Left" FontSize="15" FontWeight="Bold" VerticalAlignment="Center" Margin="0,0,0,5"/>
+                <Button x:Name="minButton" Content="___"  Background="CadetBlue" Width="30"
+                    Click="MinButton_Click"/>
+                <Button x:Name="closeButton" Width="30" HorizontalAlignment="Right" Content="X"
+                    Background="Brown" Click="CloseButton_Click"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Grid.Row="1">
+                <TextBlock  Text="Welcome to" TextAlignment="Center" FontSize="17" FontStyle="Italic" Margin="0,10,0,0"/>
+                <TextBlock  Text="Talk Back" TextAlignment="Center" FontSize="23" FontStyle="Italic" FontFamily="Comic Sans MS" Margin="0"/>
+                <TextBlock  Text="Messanger" TextAlignment="Center" FontSize="17" FontStyle="Italic" Margin="0,0,0,5"/>
+            </StackPanel>
+            <TextBlock Grid.Row="2"  Text="user name" FontSize="15" Foreground="Beige" VerticalAlignment="Bottom" TextAlignment="Center"/>
+            <TextBox Grid.Row="3" x:Name="userName" Height="30" Width="170" MaxLength="10" FontSize="15" CharacterCasing="Lower" />
+            <TextBlock Grid.Row="4" Text="password" FontSize="15" Foreground="Beige" VerticalAlignment="Bottom" TextAlignment="Center"/>
+            <PasswordBox Grid.Row="5" x:Name="password" Height="30" Width="170" MaxLength="10" FontSize="15" />
+            <TextBlock Grid.Row="6"  Text="first name" FontSize="15" Foreground="Beige" VerticalAlignment="Bottom" TextAlignment="Center"/>
+            <TextBox Grid.Row="7" x:Name="firstName" Height="30" Width="170" MaxLength="10" FontSize="15" CharacterCasing="Lower" />
+            <TextBlock Grid.Row="8"  Text="last name" FontSize="15" Foreground="Beige" VerticalAlignment="Bottom" TextAlignment="Center"/>
+            <TextBox Grid.Row="9" x:Name="lastName" Height="30" Width="170" MaxLength="10" FontSize="15" CharacterCasing="Lower"/>
+
+            <StackPanel Orientation="Horizontal" Grid.Row="10">
+                <Button  x:Name="regButton" FontSize="15" Content="Registration" Height="30" Width="120" 
+                    IsDefault="True" Background="BurlyWood"  VerticalAlignment="Center"
+                    Click="RegButton_Click" Margin="90,0,32,0"/>
+                <Button  x:Name="backButton"  FontSize="15"  Content="Back" Height="30" Width="40"
+                    Background="Chocolate"  VerticalAlignment="Center"
+                    Click="BackButton_Click"/>
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>

@@ -1,0 +1,105 @@
+﻿<Window x:Class="Client.Game.Backgammon"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Client.Game"
+        mc:Ignorable="d"
+        Title="Backgammon" x:Name="gameWindow"   Height="600" Width="800" 
+        Background="MediumVioletRed" WindowStyle="None"
+        MouseLeftButtonDown="MyMainWindow_MouseLeftButtonDown" ResizeMode="NoResize">
+    <Border BorderBrush="Black" BorderThickness="2" CornerRadius="3" >
+        <Grid x:Name="windowGrid" ShowGridLines="False">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition ></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="150"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+           <!--Top Panel-->
+            <StackPanel  x:Name="topHeader" VerticalAlignment="Top"  Orientation="Horizontal" Height="30"
+                     Background="SaddleBrown" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
+                <Button x:Name="topMenuButton" Width="60" Click="TopMenuButton_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource ="../Images/top_menu3.jpg"/>
+                    </Button.Background>
+                    <Button.ContextMenu>
+                        <ContextMenu x:Name="topMenu">
+                            <MenuItem Header="Help" >
+                                <MenuItem  Header="How to Play" Padding="-20">
+                                    <TextBlock x:Name="howToPlay" Margin="0" Width="250" Background="LightGray" Padding="5" TextWrapping="Wrap"/>
+                                </MenuItem>
+                                <MenuItem Header="About">
+                                    <TextBlock x:Name="about" Width="200" Background="LightGray" Padding="5" TextWrapping="Wrap"/>
+                                </MenuItem>
+                            </MenuItem>
+                            <MenuItem Header="Resigh" x:Name="topResighButton" Click="ResignButton_Click"/>
+                            <Separator />
+                            <MenuItem Header="Exit" Click="CloseButton_Click"/>
+                        </ContextMenu>
+                    </Button.ContextMenu>
+                </Button>
+                <StackPanel  Width="675" Orientation="Horizontal">
+                    <TextBlock  FontWeight="Bold"
+                x:Name="titleLeft" Padding="100,0,20,0" TextAlignment="Center" FontSize="15" VerticalAlignment="Center"/>
+                    <TextBlock Text="checker out" Foreground="YellowGreen" FontWeight="Bold" TextAlignment="Center" FontSize="15" VerticalAlignment="Center"/>
+                    <TextBlock Padding="10,0,20,0" Foreground="YellowGreen"
+                Text="{Binding Path=OutCounter , Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" FontWeight="Bold"
+                x:Name="titleCenter" TextAlignment="Center" FontSize="15" VerticalAlignment="Center"/>
+                    <TextBlock Text="checker on bar" Foreground="Gainsboro" FontWeight="Bold" TextAlignment="Center" FontSize="15" VerticalAlignment="Center"/>
+                    <TextBlock Padding="10,0,20,0" Foreground="Gainsboro"
+                Text="{Binding Path=TopCounter , Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" FontWeight="Bold"
+                x:Name="titleRight" TextAlignment="Center" FontSize="15" VerticalAlignment="Center"/>
+                </StackPanel>
+                <Button x:Name="minButton" Content="___"  Background="CadetBlue" Width="30"
+                    Click="MinButton_Click"/>
+                <Button x:Name="closeButton" Width="30" HorizontalAlignment="Right" Content="X"
+                    Background="Brown" Click="CloseButton_Click"/>
+            </StackPanel>
+            <StackPanel x:Name="rightpanel" Grid.Row="1" Grid.Column="1" Background="Sienna">
+                <TextBlock x:Name="your_color_example"  Text="My Checker Color" FontSize="15" TextAlignment="Center"
+                          Padding="0 10 0 10" Margin="5 10 5 10" FontWeight="DemiBold">
+                </TextBlock>
+                <!--Dice Panel-->
+                <StackPanel x:Name="dicePanel" Orientation="Horizontal" Margin="0">
+                    <Image x:Name="diceImage1" Source="{Binding Path=Image, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                        Margin="20,0,10,0"
+                       Width="50" Height="50"/>
+                    <Image x:Name="diceImage2" Source="{Binding Path=Image, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                        Margin="0"
+                       Width="50" Height="50"/>
+                </StackPanel>
+                <StackPanel x:Name="checkBoxPanel" HorizontalAlignment="Center" Orientation="Horizontal" Margin="0,20,0,0">
+                    <CheckBox x:Name="checkBoxLeftDice" IsChecked="False" Margin="0,0,13,0">
+                        <CheckBox.LayoutTransform>
+                            <ScaleTransform ScaleX="2" ScaleY="2" />
+                        </CheckBox.LayoutTransform>
+                    </CheckBox>
+                    <CheckBox x:Name="checkBoxRightDice" IsChecked="False" Margin="14,0,0,0">
+                        <CheckBox.LayoutTransform>
+                            <ScaleTransform ScaleX="2" ScaleY="2" />
+                        </CheckBox.LayoutTransform>
+                    </CheckBox>
+                </StackPanel>
+                <Button x:Name="moveButton" Content="Move" FontSize="15" Background="BlanchedAlmond"
+                   Width="60" Height="40" Margin="0,20,0,0" Click="MoveButton_Click" IsEnabled="False"/>
+                <!--<TextBlock x:Name="opponentName" FontSize="20" TextAlignment="Center" 
+                   Height="30"  FontWeight="Bold" Padding="0"
+                   Text="{Binding  Mode=OneTime}" />-->
+                <Button x:Name="rollButton" Content="Roll" FontSize="15" Background="BlanchedAlmond"
+                   Width="60" Height="40" Click="RollButton_Click" IsDefault="False"
+                        Margin="30"/>
+                <Button x:Name="resignButton" Content="Resign" FontSize="15" Background="BlanchedAlmond"
+                    Width="60" Height="40" Click="ResignButton_Click"/>
+                <TextBlock x:Name="userName" FontSize="17" FontWeight="Bold" 
+                   TextAlignment="Center" VerticalAlignment="Center" 
+                   Padding="0" Margin="0,30,0,10"
+                   Text="{Binding  Mode=OneTime}"/>
+                <TextBlock x:Name="gameInfo" Margin="10,0,10,20" TextWrapping="Wrap" Padding="5" FontSize="15" Background="Chocolate"
+                       Text="{Binding Path=Info, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>

@@ -1,0 +1,68 @@
+﻿<Window x:Class="Client.Windows.PrivateChat"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="PrivateChat" Height="400" Width="330"
+        WindowStyle="None" MouseLeftButtonDown="Window_MouseLeftButtonDown"
+        ResizeMode="NoResize" WindowStartupLocation="CenterScreen" >
+    <Border BorderBrush="Black" BorderThickness="2" CornerRadius="3">
+        <Grid ShowGridLines="False" Background="BlueViolet">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition ></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="80"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="80"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <StackPanel  x:Name="topHeader" VerticalAlignment="Top"  Orientation="Horizontal" Height="30"
+                     Background="DarkViolet" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3">
+                <Button x:Name="topMenuButton" Width="60" Click="TopMenuButton_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource ="../Images/top_menu.jpg"/>
+                    </Button.Background>
+                    <Button.ContextMenu>
+                        <ContextMenu x:Name="topMenu">
+                            <MenuItem Header="Help" >
+                                <MenuItem  Header="How to chat">
+                                    <TextBlock x:Name="howToChat" Margin="0" Width="250" Background="LightGray" Padding="5" TextWrapping="Wrap"/>
+                                </MenuItem>
+                                <MenuItem Header="About">
+                                    <TextBlock x:Name="about" Width="200" Background="LightGray" Padding="5" TextWrapping="Wrap"/>
+                                </MenuItem>
+                            </MenuItem>
+                            <MenuItem x:Name="topMenuSend" Header="Send Msg" Click="SendButton_Click"/>
+                            <MenuItem x:Name="topMenuGame" Header="Game" Click="GameButton_Click"/>
+                            <Separator />
+                            <MenuItem Header="Back" Click="CloseButton_Click"/>
+                        </ContextMenu>
+                    </Button.ContextMenu>
+                </Button>
+                <TextBlock x:Name="topTitle" FontWeight="Bold" Width="130" Text="Chat with "
+                 TextAlignment="Right" FontSize="15" VerticalAlignment="Center"/>
+                <TextBlock x:Name="titleHours" Text="{Binding Path=Hour}" Width="30" TextAlignment="Right" FontSize="15" FontWeight="Bold" VerticalAlignment="Bottom" Margin="0,0,0,5"/>
+                <TextBlock x:Name="titleSecond" Text="{Binding Path=Seconds}" Width="5" TextAlignment="Center" FontSize="15" VerticalAlignment="Bottom" Margin="0,0,0,5"/>
+                <TextBlock x:Name="titleMinutes" Text="{Binding Path=Minutes}" Width="40" TextAlignment="Left" FontSize="15" FontWeight="Bold" VerticalAlignment="Bottom" Margin="0,0,0,5"/>
+                <Button x:Name="minButton" Content="___"  Background="CadetBlue" Width="30"
+                    Click="MinButton_Click"/>
+                <Button x:Name="closeButton" Width="30" HorizontalAlignment="Right" Content="X"
+                    Background="Brown" Click="CloseButton_Click"/>
+            </StackPanel>
+            <Button x:Name="gameButton" Grid.Row="1" Grid.Column="0" Content="Game" Margin="5" Background="Brown" BorderThickness="2"
+                    Foreground="White" FontSize="15" Click="GameButton_Click"/>
+            <TextBlock x:Name="title" Grid.Row="1" Grid.Column="1" FontWeight="Bold" Text="Hi, " FontStyle="Italic" FontFamily="Comic Sans MS" TextAlignment="Center"
+                       VerticalAlignment="Center" FontSize="20"/>
+            <Button x:Name="backButton" Grid.Row="1" Grid.Column="2" Content="Back" Margin="5" Background="Blue" BorderThickness="2" 
+                    Foreground="White" FontSize="15" Click="CloseButton_Click"/>
+            <ListView x:Name="messageArea" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Margin="5" Background="Bisque" FontSize="18"></ListView>
+            <TextBox x:Name="sendTextBox" Grid.Row="3" Grid.Column="0"  Grid.ColumnSpan="2" FontSize="20" Background="Bisque" Margin="5"/>
+            <Button x:Name="sendButton" Grid.Row="3" Grid.Column="2" Content="Send" Margin="5" Background="RosyBrown" 
+                    BorderThickness="2"  Foreground="White" FontSize="15" IsDefault="True" Click="SendButton_Click"/>
+        </Grid>
+    </Border>
+</Window>
