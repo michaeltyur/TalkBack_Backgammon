@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="8a195969-388d-46d5-b073-b6c55190d377" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/:8952/BackTalkServer" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Service.wsdl" MetadataType="Wsdl" ID="e0870dd7-c540-4fb9-bf85-590381718e47" SourceId="1" SourceUrl="http://localhost/:8952/BackTalkServer?wsdl" />
+    <MetadataFile FileName="BackTalkServer.disco" MetadataType="Disco" ID="3fc57dce-1ac4-4710-84d6-2dec2304ec28" SourceId="1" SourceUrl="http://localhost/:8952/BackTalkServer?disco" />
+    <MetadataFile FileName="BackTalkServer.xsd" MetadataType="Schema" ID="ef9e1463-3115-4743-9419-11221e2b7ad8" SourceId="1" SourceUrl="http://localhost/:8952/BackTalkServer?xsd=xsd2" />
+    <MetadataFile FileName="BackTalkServer1.xsd" MetadataType="Schema" ID="68aacc30-4ad6-4ca9-8b79-e0a405bcb3f2" SourceId="1" SourceUrl="http://localhost/:8952/BackTalkServer?xsd=xsd1" />
+    <MetadataFile FileName="BackTalkServer2.xsd" MetadataType="Schema" ID="b44600d1-2ea5-4073-aab4-692c74419f20" SourceId="1" SourceUrl="http://localhost/:8952/BackTalkServer?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

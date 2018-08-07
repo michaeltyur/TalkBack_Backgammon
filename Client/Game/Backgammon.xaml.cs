@@ -1,7 +1,8 @@
-﻿using Client.ChatServer;
+﻿using Client.TalkBackService;
 using Client.Game.GameData;
 using Client.Game.GameLogic;
 using Client.Game.UserControls;
+using Client.TalkBackService;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -40,7 +41,8 @@ namespace Client.Game
 
         public string User { get; set; }
         public string Opponent { get; set; }
-        public ChatServiceClient Host { get; set; }
+        public IChatService ChatHost { get; set; }
+        public IGameService GameHost { get; set; }
 
         public int IndexCollSelected { get; set; }
 
@@ -61,7 +63,10 @@ namespace Client.Game
             Opponent = opponent;
             Master = master;
             IndexCollSelected = -5;
-            Host = ClientInstances.Instance.Chat.Host;
+
+            ChatHost = ClientInstances.Instance.Chat.ChatHost;
+            GameHost= ClientInstances.Instance.Chat.GameHost;
+
             rand = new Random();
             DiceAction = new DiceAction(this);
             CheckerLogic = new СheckerLogic(this);
@@ -95,7 +100,7 @@ namespace Client.Game
             Closed += Backgammon_Closed;
 
             Show();
-            Host.GetGameTable(User, Opponent);
+            GameHost.GetGameTable(User, Opponent);
         }
 
         #region Events
@@ -137,7 +142,7 @@ namespace Client.Game
             {
                 if (ClientInstances.Instance.GameList.ContainsKey(Opponent))
                 {
-                    Host.UserLeftGameAsync(User, Opponent);
+                    GameHost.UserLeftGameAsync(User, Opponent);
                     ClientInstances.Instance.GameList.Remove(Opponent);
                 }
                 if(ClientInstances.Instance.Chat!=null)
@@ -161,7 +166,7 @@ namespace Client.Game
         {
             if (Opponent == Player.autoPlayer.ToString())
             {
-                Host.StartAutoPlayerAsync(User);
+                GameHost.StartAutoPlayerAsync(User);
             }
             rollButton.Content = "Roll";
             rollButton.Click -= StartButton_Click;
@@ -175,7 +180,7 @@ namespace Client.Game
             CheckerLogic.ClearSelections();
             if (Master)
             {
-                Host.RollAsync(User, Opponent);
+                GameHost.RollAsync(User, Opponent);
 
                 rollButton.IsEnabled = false;
                 moveButton.IsEnabled = true;
@@ -212,10 +217,10 @@ namespace Client.Game
             if (IndexCollSelected == -1)
             {
                 if (MyCheckerColor == White)
-                    Host.MoveCheckerFromBarAsync(User, Opponent, 0, number);
-                else Host.MoveCheckerFromBarAsync(User, Opponent, 1, number);
+                    GameHost.MoveCheckerFromBarAsync(User, Opponent, 0, number);
+                else GameHost.MoveCheckerFromBarAsync(User, Opponent, 1, number);
             }
-            else Host.MoveCheckerAsync(User, Opponent, IndexCollSelected, number);
+            else GameHost.MoveCheckerAsync(User, Opponent, IndexCollSelected, number);
 
             if (Dice1.Number != Dice2.Number && (checkBoxLeftDice.IsChecked == true || checkBoxRightDice.IsChecked == true))
             {
@@ -240,7 +245,7 @@ namespace Client.Game
         {
             if (Master)
             {
-                Host.SetMasterAsync(User, Opponent);
+                GameHost.SetMasterAsync(User, Opponent);
                 DiceAction.SetWaiter();
             }
             if (Opponent == Player.autoPlayer.ToString())

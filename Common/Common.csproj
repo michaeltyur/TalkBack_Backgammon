@@ -52,6 +52,7 @@
     <Compile Include="Data\Сhecker.cs" />
     <Compile Include="Interface\IChatService.cs" />
     <Compile Include="Interface\IClientCallback.cs" />
+    <Compile Include="Interface\IGameService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

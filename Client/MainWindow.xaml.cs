@@ -14,7 +14,7 @@ namespace Client
     
     public partial class MainWindow : Window
     {
-        public object NotifyIcon { get; private set; }
+        //public object NotifyIcon { get; private set; }
 
         //ChatServer.ChatServiceClient host;
         public MainWindow()
@@ -25,10 +25,10 @@ namespace Client
             ClientInstances.Instance.Login.Show();
         }
 
-        private void Exit_Click(object sender, RoutedEventArgs e)
-        {
-            Application.Current.Shutdown();
-        }
+        //private void Exit_Click(object sender, RoutedEventArgs e)
+        //{
+        //    Application.Current.Shutdown();
+        //}
 
     }
 

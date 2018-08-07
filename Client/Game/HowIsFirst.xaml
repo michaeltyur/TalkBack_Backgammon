@@ -3,14 +3,12 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Client.Game"
         mc:Ignorable="d"
-        Title="HowIsFirst" Height="300" Width="250" x:Name="howFirstWindow"
+        Title="How is first" Height="300" Width="250"
         Background="LightSlateGray" WindowStyle="None" WindowStartupLocation="CenterScreen"
         MouseLeftButtonDown="MyMainWindow_MouseLeftButtonDown" ResizeMode="NoResize">
     <Border BorderBrush="DarkSlateGray" BorderThickness="2" CornerRadius="3" >
-   
-    <Grid x:Name="howFirstGrid">
+        <Grid x:Name="howFirstGrid">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="2*"></RowDefinition>

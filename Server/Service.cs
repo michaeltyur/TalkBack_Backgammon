@@ -13,7 +13,7 @@ namespace Server
     /// <summary>
     /// Contains all methods without logic for performing connecting users and DB.
     /// </summary>
-    public class Service: IChatService
+    public class Service: IChatService,IGameService
     {
         public Service() { }
 

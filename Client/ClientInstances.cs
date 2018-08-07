@@ -1,5 +1,4 @@
-﻿using Client.ChatServer;
-using Client.Game;
+﻿using Client.Game;
 using Client.Windows;
 using System;
 using System.Collections.Generic;
@@ -27,7 +26,10 @@ namespace Client
         public Chat Chat { get; set; }
 
 
-        public ChatServiceClient Host { get; }
+        public TalkBackService.IChatService ChatHost { get; }
+        public TalkBackService.IGameService GameHost { get; }
+
+
         public Dictionary<string, PrivateChat> PrivateChats;
         public Dictionary<string, Backgammon> GameList;
         public Dictionary<string, HowIsFirst> HowFirstsList; 
@@ -35,7 +37,10 @@ namespace Client
         private ClientInstances()
         {
             var callback = new ClientCallback();
-            Host = new ChatServiceClient(new System.ServiceModel.InstanceContext(callback));
+
+            ChatHost = new TalkBackService.ChatServiceClient(new System.ServiceModel.InstanceContext(callback));
+            GameHost = new TalkBackService.GameServiceClient(new System.ServiceModel.InstanceContext(callback));
+
             PrivateChats = new Dictionary<string, PrivateChat>();
             GameList = new Dictionary<string, Backgammon>();
             HowFirstsList = new Dictionary<string, HowIsFirst>();

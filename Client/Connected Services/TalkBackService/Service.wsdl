@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IChatService_policy">
+  <wsp:Policy wsu:Id="Chat_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <wsrm:RMAssertion xmlns:wsrm="http://schemas.xmlsoap.org/ws/2005/02/rm/policy">
@@ -103,7 +103,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IChatService_Register_Input_policy">
+  <wsp:Policy wsu:Id="Chat_Register_Input_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -126,7 +126,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IChatService_Login_Input_policy">
+  <wsp:Policy wsu:Id="Chat_Login_Input_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -149,7 +149,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IChatService_Logout_Input_policy">
+  <wsp:Policy wsu:Id="Chat_Logout_Input_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -172,7 +172,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IChatService_SendMessage_Input_policy">
+  <wsp:Policy wsu:Id="Chat_SendMessage_Input_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -195,7 +195,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IChatService_SendErrorMessage_Input_policy">
+  <wsp:Policy wsu:Id="Chat_SendErrorMessage_Input_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -218,7 +218,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IChatService_SendPrivateMsg_Input_policy">
+  <wsp:Policy wsu:Id="Chat_SendPrivateMsg_Input_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -241,7 +241,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IChatService_PrivateChat_Input_policy">
+  <wsp:Policy wsu:Id="Chat_PrivateChat_Input_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -264,7 +264,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IChatService_ExitPrivateChat_Input_policy">
+  <wsp:Policy wsu:Id="Chat_ExitPrivateChat_Input_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -287,7 +287,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IChatService_ConfirmationPrivateChat_Input_policy">
+  <wsp:Policy wsu:Id="Chat_ConfirmationPrivateChat_Input_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -310,7 +310,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IChatService_StartGame_Input_policy">
+  <wsp:Policy wsu:Id="Chat_BackToChat_Input_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -333,7 +333,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IChatService_StartAutoPlayer_Input_policy">
+  <wsp:Policy wsu:Id="Chat_RecieveMessage_output_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -356,7 +356,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IChatService_RequestGame_Input_policy">
+  <wsp:Policy wsu:Id="Chat_RecieveGameError_output_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -379,7 +379,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IChatService_GameOver_Input_policy">
+  <wsp:Policy wsu:Id="Chat_RecieveError_output_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -402,7 +402,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IChatService_UserLeftGame_Input_policy">
+  <wsp:Policy wsu:Id="Chat_UsersOnLine_output_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -425,7 +425,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IChatService_Roll_Input_policy">
+  <wsp:Policy wsu:Id="Chat_ResultActionfromLogout_output_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -448,7 +448,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IChatService_RollEnable_Input_policy">
+  <wsp:Policy wsu:Id="Chat_ResultActionfromLogoin_output_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -471,7 +471,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IChatService_RollDisable_Input_policy">
+  <wsp:Policy wsu:Id="Chat_RecievePrivateMsg_output_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -494,7 +494,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IChatService_SetMaster_Input_policy">
+  <wsp:Policy wsu:Id="Chat_PrivateChatStart_output_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -517,7 +517,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IChatService_GameInfoUpdate_Input_policy">
+  <wsp:Policy wsu:Id="Chat_PrivateChatStartFromOpponent_output_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -540,7 +540,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IChatService_SetWaiter_Input_policy">
+  <wsp:Policy wsu:Id="Chat_PrivateChatSlose_output_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -563,7 +563,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IChatService_MoveChecker_Input_policy">
+  <wsp:Policy wsu:Id="Chat_RequestGameFromServer_output_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -586,7 +586,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IChatService_MoveCheckerFromBar_Input_policy">
+  <wsp:Policy wsu:Id="Chat_StartGameFromServer_output_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -609,7 +609,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IChatService_GetGameTable_Input_policy">
+  <wsp:Policy wsu:Id="Chat_GameOverFromServer_output_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -632,7 +632,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IChatService_RollHowFirst_Input_policy">
+  <wsp:Policy wsu:Id="Chat_RecieveRoll_output_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -655,7 +655,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IChatService_StartHowToFirst_Input_policy">
+  <wsp:Policy wsu:Id="Chat_RollEnableFromServer_output_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -678,7 +678,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IChatService_CloseHowToFirst_Input_policy">
+  <wsp:Policy wsu:Id="Chat_RollDisableFromServer_output_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -701,7 +701,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IChatService_BackToChat_Input_policy">
+  <wsp:Policy wsu:Id="Chat_MoveEnableFromServer_output_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -724,7 +724,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IChatService_RecieveMessage_output_policy">
+  <wsp:Policy wsu:Id="Chat_GameInfoUpdateFromServer_output_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -747,7 +747,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IChatService_RecieveGameError_output_policy">
+  <wsp:Policy wsu:Id="Chat_SetMasterFromServer_output_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -770,7 +770,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IChatService_RecieveError_output_policy">
+  <wsp:Policy wsu:Id="Chat_SetWaiterFromServer_output_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -793,7 +793,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IChatService_UsersOnLine_output_policy">
+  <wsp:Policy wsu:Id="Chat_MoveCheckerFromServer_output_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -816,7 +816,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IChatService_ResultActionfromLogout_output_policy">
+  <wsp:Policy wsu:Id="Chat_UpdateTable_output_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -839,7 +839,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IChatService_ResultActionfromLogoin_output_policy">
+  <wsp:Policy wsu:Id="Chat_StartHowToFirstFromServer_output_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -862,7 +862,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IChatService_RecievePrivateMsg_output_policy">
+  <wsp:Policy wsu:Id="Chat_CloseHowToFirstFromServer_output_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -885,7 +885,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IChatService_PrivateChatStart_output_policy">
+  <wsp:Policy wsu:Id="Chat_RecieveRollHowFirst_output_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -908,7 +908,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IChatService_PrivateChatStartFromOpponent_output_policy">
+  <wsp:Policy wsu:Id="Chat_BackToChatFromServer_output_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -931,7 +931,110 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IChatService_PrivateChatSlose_output_policy">
+  <wsp:Policy wsu:Id="Game_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsrm:RMAssertion xmlns:wsrm="http://schemas.xmlsoap.org/ws/2005/02/rm/policy">
+          <wsrm:InactivityTimeout Milliseconds="600000" />
+          <wsrm:AcknowledgementInterval Milliseconds="200" />
+        </wsrm:RMAssertion>
+        <sp:SymmetricBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:ProtectionToken>
+              <wsp:Policy>
+                <sp:SecureConversationToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+                  <wsp:Policy>
+                    <sp:RequireDerivedKeys />
+                    <sp:BootstrapPolicy>
+                      <wsp:Policy>
+                        <sp:SignedParts>
+                          <sp:Body />
+                          <sp:Header Name="ChannelInstance" Namespace="http://schemas.microsoft.com/ws/2005/02/duplex" />
+                          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+                          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+                          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+                          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+                          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+                          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+                          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+                        </sp:SignedParts>
+                        <sp:EncryptedParts>
+                          <sp:Body />
+                        </sp:EncryptedParts>
+                        <sp:SymmetricBinding>
+                          <wsp:Policy>
+                            <sp:ProtectionToken>
+                              <wsp:Policy>
+                                <sp:SpnegoContextToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+                                  <wsp:Policy>
+                                    <sp:RequireDerivedKeys />
+                                  </wsp:Policy>
+                                </sp:SpnegoContextToken>
+                              </wsp:Policy>
+                            </sp:ProtectionToken>
+                            <sp:AlgorithmSuite>
+                              <wsp:Policy>
+                                <sp:Basic256 />
+                              </wsp:Policy>
+                            </sp:AlgorithmSuite>
+                            <sp:Layout>
+                              <wsp:Policy>
+                                <sp:Strict />
+                              </wsp:Policy>
+                            </sp:Layout>
+                            <sp:IncludeTimestamp />
+                            <sp:EncryptSignature />
+                            <sp:OnlySignEntireHeadersAndBody />
+                          </wsp:Policy>
+                        </sp:SymmetricBinding>
+                        <sp:Wss11>
+                          <wsp:Policy />
+                        </sp:Wss11>
+                        <sp:Trust10>
+                          <wsp:Policy>
+                            <sp:MustSupportIssuedTokens />
+                            <sp:RequireClientEntropy />
+                            <sp:RequireServerEntropy />
+                          </wsp:Policy>
+                        </sp:Trust10>
+                      </wsp:Policy>
+                    </sp:BootstrapPolicy>
+                  </wsp:Policy>
+                </sp:SecureConversationToken>
+              </wsp:Policy>
+            </sp:ProtectionToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+            <sp:IncludeTimestamp />
+            <sp:EncryptSignature />
+            <sp:OnlySignEntireHeadersAndBody />
+          </wsp:Policy>
+        </sp:SymmetricBinding>
+        <sp:Wss11 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy />
+        </sp:Wss11>
+        <sp:Trust10 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:MustSupportIssuedTokens />
+            <sp:RequireClientEntropy />
+            <sp:RequireServerEntropy />
+          </wsp:Policy>
+        </sp:Trust10>
+        <cdp:CompositeDuplex xmlns:cdp="http://schemas.microsoft.com/net/2006/06/duplex" />
+        <ow:OneWay xmlns:ow="http://schemas.microsoft.com/ws/2005/05/routing/policy" />
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="Game_StartGame_Input_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -954,7 +1057,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IChatService_RequestGameFromServer_output_policy">
+  <wsp:Policy wsu:Id="Game_StartAutoPlayer_Input_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -977,7 +1080,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IChatService_StartGameFromServer_output_policy">
+  <wsp:Policy wsu:Id="Game_RequestGame_Input_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -1000,7 +1103,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IChatService_GameOverFromServer_output_policy">
+  <wsp:Policy wsu:Id="Game_GameOver_Input_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -1023,7 +1126,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IChatService_RecieveRoll_output_policy">
+  <wsp:Policy wsu:Id="Game_UserLeftGame_Input_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -1046,7 +1149,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IChatService_RollEnableFromServer_output_policy">
+  <wsp:Policy wsu:Id="Game_Roll_Input_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -1069,7 +1172,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IChatService_RollDisableFromServer_output_policy">
+  <wsp:Policy wsu:Id="Game_RollEnable_Input_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -1092,7 +1195,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IChatService_MoveEnableFromServer_output_policy">
+  <wsp:Policy wsu:Id="Game_RollDisable_Input_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -1115,7 +1218,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IChatService_GameInfoUpdateFromServer_output_policy">
+  <wsp:Policy wsu:Id="Game_SetMaster_Input_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -1138,7 +1241,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IChatService_SetMasterFromServer_output_policy">
+  <wsp:Policy wsu:Id="Game_GameInfoUpdate_Input_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -1161,7 +1264,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IChatService_SetWaiterFromServer_output_policy">
+  <wsp:Policy wsu:Id="Game_SetWaiter_Input_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -1184,7 +1287,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IChatService_MoveCheckerFromServer_output_policy">
+  <wsp:Policy wsu:Id="Game_MoveChecker_Input_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -1207,7 +1310,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IChatService_UpdateTable_output_policy">
+  <wsp:Policy wsu:Id="Game_MoveCheckerFromBar_Input_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -1230,7 +1333,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IChatService_StartHowToFirstFromServer_output_policy">
+  <wsp:Policy wsu:Id="Game_GetGameTable_Input_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -1253,7 +1356,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IChatService_CloseHowToFirstFromServer_output_policy">
+  <wsp:Policy wsu:Id="Game_RollHowFirst_Input_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -1276,7 +1379,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IChatService_RecieveRollHowFirst_output_policy">
+  <wsp:Policy wsu:Id="Game_StartHowToFirst_Input_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -1299,7 +1402,605 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IChatService_BackToChatFromServer_output_policy">
+  <wsp:Policy wsu:Id="Game_CloseHowToFirst_Input_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="Sequence" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="SequenceAcknowledgement" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="AckRequested" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="ChannelInstance" Namespace="http://schemas.microsoft.com/ws/2005/02/duplex" />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="Game_RecieveMessage_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="Sequence" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="SequenceAcknowledgement" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="AckRequested" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="ChannelInstance" Namespace="http://schemas.microsoft.com/ws/2005/02/duplex" />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="Game_RecieveGameError_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="Sequence" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="SequenceAcknowledgement" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="AckRequested" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="ChannelInstance" Namespace="http://schemas.microsoft.com/ws/2005/02/duplex" />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="Game_RecieveError_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="Sequence" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="SequenceAcknowledgement" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="AckRequested" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="ChannelInstance" Namespace="http://schemas.microsoft.com/ws/2005/02/duplex" />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="Game_UsersOnLine_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="Sequence" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="SequenceAcknowledgement" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="AckRequested" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="ChannelInstance" Namespace="http://schemas.microsoft.com/ws/2005/02/duplex" />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="Game_ResultActionfromLogout_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="Sequence" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="SequenceAcknowledgement" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="AckRequested" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="ChannelInstance" Namespace="http://schemas.microsoft.com/ws/2005/02/duplex" />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="Game_ResultActionfromLogoin_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="Sequence" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="SequenceAcknowledgement" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="AckRequested" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="ChannelInstance" Namespace="http://schemas.microsoft.com/ws/2005/02/duplex" />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="Game_RecievePrivateMsg_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="Sequence" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="SequenceAcknowledgement" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="AckRequested" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="ChannelInstance" Namespace="http://schemas.microsoft.com/ws/2005/02/duplex" />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="Game_PrivateChatStart_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="Sequence" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="SequenceAcknowledgement" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="AckRequested" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="ChannelInstance" Namespace="http://schemas.microsoft.com/ws/2005/02/duplex" />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="Game_PrivateChatStartFromOpponent_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="Sequence" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="SequenceAcknowledgement" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="AckRequested" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="ChannelInstance" Namespace="http://schemas.microsoft.com/ws/2005/02/duplex" />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="Game_PrivateChatSlose_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="Sequence" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="SequenceAcknowledgement" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="AckRequested" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="ChannelInstance" Namespace="http://schemas.microsoft.com/ws/2005/02/duplex" />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="Game_RequestGameFromServer_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="Sequence" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="SequenceAcknowledgement" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="AckRequested" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="ChannelInstance" Namespace="http://schemas.microsoft.com/ws/2005/02/duplex" />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="Game_StartGameFromServer_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="Sequence" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="SequenceAcknowledgement" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="AckRequested" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="ChannelInstance" Namespace="http://schemas.microsoft.com/ws/2005/02/duplex" />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="Game_GameOverFromServer_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="Sequence" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="SequenceAcknowledgement" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="AckRequested" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="ChannelInstance" Namespace="http://schemas.microsoft.com/ws/2005/02/duplex" />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="Game_RecieveRoll_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="Sequence" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="SequenceAcknowledgement" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="AckRequested" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="ChannelInstance" Namespace="http://schemas.microsoft.com/ws/2005/02/duplex" />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="Game_RollEnableFromServer_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="Sequence" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="SequenceAcknowledgement" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="AckRequested" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="ChannelInstance" Namespace="http://schemas.microsoft.com/ws/2005/02/duplex" />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="Game_RollDisableFromServer_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="Sequence" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="SequenceAcknowledgement" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="AckRequested" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="ChannelInstance" Namespace="http://schemas.microsoft.com/ws/2005/02/duplex" />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="Game_MoveEnableFromServer_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="Sequence" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="SequenceAcknowledgement" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="AckRequested" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="ChannelInstance" Namespace="http://schemas.microsoft.com/ws/2005/02/duplex" />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="Game_GameInfoUpdateFromServer_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="Sequence" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="SequenceAcknowledgement" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="AckRequested" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="ChannelInstance" Namespace="http://schemas.microsoft.com/ws/2005/02/duplex" />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="Game_SetMasterFromServer_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="Sequence" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="SequenceAcknowledgement" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="AckRequested" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="ChannelInstance" Namespace="http://schemas.microsoft.com/ws/2005/02/duplex" />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="Game_SetWaiterFromServer_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="Sequence" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="SequenceAcknowledgement" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="AckRequested" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="ChannelInstance" Namespace="http://schemas.microsoft.com/ws/2005/02/duplex" />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="Game_MoveCheckerFromServer_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="Sequence" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="SequenceAcknowledgement" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="AckRequested" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="ChannelInstance" Namespace="http://schemas.microsoft.com/ws/2005/02/duplex" />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="Game_UpdateTable_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="Sequence" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="SequenceAcknowledgement" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="AckRequested" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="ChannelInstance" Namespace="http://schemas.microsoft.com/ws/2005/02/duplex" />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="Game_StartHowToFirstFromServer_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="Sequence" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="SequenceAcknowledgement" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="AckRequested" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="ChannelInstance" Namespace="http://schemas.microsoft.com/ws/2005/02/duplex" />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="Game_CloseHowToFirstFromServer_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="Sequence" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="SequenceAcknowledgement" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="AckRequested" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="ChannelInstance" Namespace="http://schemas.microsoft.com/ws/2005/02/duplex" />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="Game_RecieveRollHowFirst_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="Sequence" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="SequenceAcknowledgement" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="AckRequested" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="ChannelInstance" Namespace="http://schemas.microsoft.com/ws/2005/02/duplex" />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="Game_BackToChatFromServer_output_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -1324,9 +2025,9 @@
   </wsp:Policy>
   <wsdl:types>
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
-      <xsd:import schemaLocation="http://localhost/:8952/ChatServer?xsd=xsd0" namespace="http://tempuri.org/" />
-      <xsd:import schemaLocation="http://localhost/:8952/ChatServer?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
-      <xsd:import schemaLocation="http://localhost/:8952/ChatServer?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost/:8952/BackTalkServer?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost/:8952/BackTalkServer?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/:8952/BackTalkServer?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IChatService_Register_InputMessage">
@@ -1355,57 +2056,6 @@
   </wsdl:message>
   <wsdl:message name="IChatService_ConfirmationPrivateChat_InputMessage">
     <wsdl:part name="parameters" element="tns:ConfirmationPrivateChat" />
-  </wsdl:message>
-  <wsdl:message name="IChatService_StartGame_InputMessage">
-    <wsdl:part name="parameters" element="tns:StartGame" />
-  </wsdl:message>
-  <wsdl:message name="IChatService_StartAutoPlayer_InputMessage">
-    <wsdl:part name="parameters" element="tns:StartAutoPlayer" />
-  </wsdl:message>
-  <wsdl:message name="IChatService_RequestGame_InputMessage">
-    <wsdl:part name="parameters" element="tns:RequestGame" />
-  </wsdl:message>
-  <wsdl:message name="IChatService_GameOver_InputMessage">
-    <wsdl:part name="parameters" element="tns:GameOver" />
-  </wsdl:message>
-  <wsdl:message name="IChatService_UserLeftGame_InputMessage">
-    <wsdl:part name="parameters" element="tns:UserLeftGame" />
-  </wsdl:message>
-  <wsdl:message name="IChatService_Roll_InputMessage">
-    <wsdl:part name="parameters" element="tns:Roll" />
-  </wsdl:message>
-  <wsdl:message name="IChatService_RollEnable_InputMessage">
-    <wsdl:part name="parameters" element="tns:RollEnable" />
-  </wsdl:message>
-  <wsdl:message name="IChatService_RollDisable_InputMessage">
-    <wsdl:part name="parameters" element="tns:RollDisable" />
-  </wsdl:message>
-  <wsdl:message name="IChatService_SetMaster_InputMessage">
-    <wsdl:part name="parameters" element="tns:SetMaster" />
-  </wsdl:message>
-  <wsdl:message name="IChatService_GameInfoUpdate_InputMessage">
-    <wsdl:part name="parameters" element="tns:GameInfoUpdate" />
-  </wsdl:message>
-  <wsdl:message name="IChatService_SetWaiter_InputMessage">
-    <wsdl:part name="parameters" element="tns:SetWaiter" />
-  </wsdl:message>
-  <wsdl:message name="IChatService_MoveChecker_InputMessage">
-    <wsdl:part name="parameters" element="tns:MoveChecker" />
-  </wsdl:message>
-  <wsdl:message name="IChatService_MoveCheckerFromBar_InputMessage">
-    <wsdl:part name="parameters" element="tns:MoveCheckerFromBar" />
-  </wsdl:message>
-  <wsdl:message name="IChatService_GetGameTable_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetGameTable" />
-  </wsdl:message>
-  <wsdl:message name="IChatService_RollHowFirst_InputMessage">
-    <wsdl:part name="parameters" element="tns:RollHowFirst" />
-  </wsdl:message>
-  <wsdl:message name="IChatService_StartHowToFirst_InputMessage">
-    <wsdl:part name="parameters" element="tns:StartHowToFirst" />
-  </wsdl:message>
-  <wsdl:message name="IChatService_CloseHowToFirst_InputMessage">
-    <wsdl:part name="parameters" element="tns:CloseHowToFirst" />
   </wsdl:message>
   <wsdl:message name="IChatService_BackToChat_InputMessage">
     <wsdl:part name="parameters" element="tns:BackToChat" />
@@ -1488,6 +2138,135 @@
   <wsdl:message name="IChatService_BackToChatFromServer_OutputCallbackMessage">
     <wsdl:part name="parameters" element="tns:BackToChatFromServer" />
   </wsdl:message>
+  <wsdl:message name="IGameService_StartGame_InputMessage">
+    <wsdl:part name="parameters" element="tns:StartGame" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_StartAutoPlayer_InputMessage">
+    <wsdl:part name="parameters" element="tns:StartAutoPlayer" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_RequestGame_InputMessage">
+    <wsdl:part name="parameters" element="tns:RequestGame" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_GameOver_InputMessage">
+    <wsdl:part name="parameters" element="tns:GameOver" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_UserLeftGame_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserLeftGame" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_Roll_InputMessage">
+    <wsdl:part name="parameters" element="tns:Roll" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_RollEnable_InputMessage">
+    <wsdl:part name="parameters" element="tns:RollEnable" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_RollDisable_InputMessage">
+    <wsdl:part name="parameters" element="tns:RollDisable" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_SetMaster_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetMaster" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_GameInfoUpdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GameInfoUpdate" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_SetWaiter_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetWaiter" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_MoveChecker_InputMessage">
+    <wsdl:part name="parameters" element="tns:MoveChecker" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_MoveCheckerFromBar_InputMessage">
+    <wsdl:part name="parameters" element="tns:MoveCheckerFromBar" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_GetGameTable_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGameTable" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_RollHowFirst_InputMessage">
+    <wsdl:part name="parameters" element="tns:RollHowFirst" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_StartHowToFirst_InputMessage">
+    <wsdl:part name="parameters" element="tns:StartHowToFirst" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_CloseHowToFirst_InputMessage">
+    <wsdl:part name="parameters" element="tns:CloseHowToFirst" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_RecieveMessage_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:RecieveMessage" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_RecieveGameError_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:RecieveGameError" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_RecieveError_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:RecieveError" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_UsersOnLine_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:UsersOnLine" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_ResultActionfromLogout_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:ResultActionfromLogout" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_ResultActionfromLogoin_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:ResultActionfromLogoin" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_RecievePrivateMsg_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:RecievePrivateMsg" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_PrivateChatStart_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:PrivateChatStart" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_PrivateChatStartFromOpponent_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:PrivateChatStartFromOpponent" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_PrivateChatSlose_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:PrivateChatSlose" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_RequestGameFromServer_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:RequestGameFromServer" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_StartGameFromServer_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:StartGameFromServer" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_GameOverFromServer_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:GameOverFromServer" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_RecieveRoll_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:RecieveRoll" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_RollEnableFromServer_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:RollEnableFromServer" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_RollDisableFromServer_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:RollDisableFromServer" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_MoveEnableFromServer_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:MoveEnableFromServer" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_GameInfoUpdateFromServer_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:GameInfoUpdateFromServer" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_SetMasterFromServer_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:SetMasterFromServer" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_SetWaiterFromServer_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:SetWaiterFromServer" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_MoveCheckerFromServer_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:MoveCheckerFromServer" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_UpdateTable_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTable" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_StartHowToFirstFromServer_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:StartHowToFirstFromServer" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_CloseHowToFirstFromServer_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:CloseHowToFirstFromServer" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_RecieveRollHowFirst_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:RecieveRollHowFirst" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_BackToChatFromServer_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:BackToChatFromServer" />
+  </wsdl:message>
   <wsdl:portType name="IChatService">
     <wsdl:operation name="Register">
       <wsdl:input wsaw:Action="http://tempuri.org/IChatService/Register" message="tns:IChatService_Register_InputMessage" />
@@ -1515,57 +2294,6 @@
     </wsdl:operation>
     <wsdl:operation name="ConfirmationPrivateChat">
       <wsdl:input wsaw:Action="http://tempuri.org/IChatService/ConfirmationPrivateChat" message="tns:IChatService_ConfirmationPrivateChat_InputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="StartGame">
-      <wsdl:input wsaw:Action="http://tempuri.org/IChatService/StartGame" message="tns:IChatService_StartGame_InputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="StartAutoPlayer">
-      <wsdl:input wsaw:Action="http://tempuri.org/IChatService/StartAutoPlayer" message="tns:IChatService_StartAutoPlayer_InputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="RequestGame">
-      <wsdl:input wsaw:Action="http://tempuri.org/IChatService/RequestGame" message="tns:IChatService_RequestGame_InputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="GameOver">
-      <wsdl:input wsaw:Action="http://tempuri.org/IChatService/GameOver" message="tns:IChatService_GameOver_InputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="UserLeftGame">
-      <wsdl:input wsaw:Action="http://tempuri.org/IChatService/UserLeftGame" message="tns:IChatService_UserLeftGame_InputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="Roll">
-      <wsdl:input wsaw:Action="http://tempuri.org/IChatService/Roll" message="tns:IChatService_Roll_InputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="RollEnable">
-      <wsdl:input wsaw:Action="http://tempuri.org/IChatService/RollEnable" message="tns:IChatService_RollEnable_InputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="RollDisable">
-      <wsdl:input wsaw:Action="http://tempuri.org/IChatService/RollDisable" message="tns:IChatService_RollDisable_InputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="SetMaster">
-      <wsdl:input wsaw:Action="http://tempuri.org/IChatService/SetMaster" message="tns:IChatService_SetMaster_InputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="GameInfoUpdate">
-      <wsdl:input wsaw:Action="http://tempuri.org/IChatService/GameInfoUpdate" message="tns:IChatService_GameInfoUpdate_InputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="SetWaiter">
-      <wsdl:input wsaw:Action="http://tempuri.org/IChatService/SetWaiter" message="tns:IChatService_SetWaiter_InputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="MoveChecker">
-      <wsdl:input wsaw:Action="http://tempuri.org/IChatService/MoveChecker" message="tns:IChatService_MoveChecker_InputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="MoveCheckerFromBar">
-      <wsdl:input wsaw:Action="http://tempuri.org/IChatService/MoveCheckerFromBar" message="tns:IChatService_MoveCheckerFromBar_InputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="GetGameTable">
-      <wsdl:input wsaw:Action="http://tempuri.org/IChatService/GetGameTable" message="tns:IChatService_GetGameTable_InputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="RollHowFirst">
-      <wsdl:input wsaw:Action="http://tempuri.org/IChatService/RollHowFirst" message="tns:IChatService_RollHowFirst_InputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="StartHowToFirst">
-      <wsdl:input wsaw:Action="http://tempuri.org/IChatService/StartHowToFirst" message="tns:IChatService_StartHowToFirst_InputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="CloseHowToFirst">
-      <wsdl:input wsaw:Action="http://tempuri.org/IChatService/CloseHowToFirst" message="tns:IChatService_CloseHowToFirst_InputMessage" />
     </wsdl:operation>
     <wsdl:operation name="BackToChat">
       <wsdl:input wsaw:Action="http://tempuri.org/IChatService/BackToChat" message="tns:IChatService_BackToChat_InputMessage" />
@@ -1649,388 +2377,714 @@
       <wsdl:output wsaw:Action="http://tempuri.org/IChatService/BackToChatFromServer" message="tns:IChatService_BackToChatFromServer_OutputCallbackMessage" />
     </wsdl:operation>
   </wsdl:portType>
-  <wsdl:binding name="WSDualHttpBinding_IChatService" type="tns:IChatService">
-    <wsp:PolicyReference URI="#WSDualHttpBinding_IChatService_policy" />
+  <wsdl:portType name="IGameService">
+    <wsdl:operation name="StartGame">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGameService/StartGame" message="tns:IGameService_StartGame_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StartAutoPlayer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGameService/StartAutoPlayer" message="tns:IGameService_StartAutoPlayer_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RequestGame">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGameService/RequestGame" message="tns:IGameService_RequestGame_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GameOver">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGameService/GameOver" message="tns:IGameService_GameOver_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserLeftGame">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGameService/UserLeftGame" message="tns:IGameService_UserLeftGame_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Roll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGameService/Roll" message="tns:IGameService_Roll_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RollEnable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGameService/RollEnable" message="tns:IGameService_RollEnable_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RollDisable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGameService/RollDisable" message="tns:IGameService_RollDisable_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetMaster">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGameService/SetMaster" message="tns:IGameService_SetMaster_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GameInfoUpdate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGameService/GameInfoUpdate" message="tns:IGameService_GameInfoUpdate_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetWaiter">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGameService/SetWaiter" message="tns:IGameService_SetWaiter_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MoveChecker">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGameService/MoveChecker" message="tns:IGameService_MoveChecker_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MoveCheckerFromBar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGameService/MoveCheckerFromBar" message="tns:IGameService_MoveCheckerFromBar_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGameTable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGameService/GetGameTable" message="tns:IGameService_GetGameTable_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RollHowFirst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGameService/RollHowFirst" message="tns:IGameService_RollHowFirst_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StartHowToFirst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGameService/StartHowToFirst" message="tns:IGameService_StartHowToFirst_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CloseHowToFirst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGameService/CloseHowToFirst" message="tns:IGameService_CloseHowToFirst_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RecieveMessage">
+      <wsdl:output wsaw:Action="http://tempuri.org/IGameService/RecieveMessage" message="tns:IGameService_RecieveMessage_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RecieveGameError">
+      <wsdl:output wsaw:Action="http://tempuri.org/IGameService/RecieveGameError" message="tns:IGameService_RecieveGameError_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RecieveError">
+      <wsdl:output wsaw:Action="http://tempuri.org/IGameService/RecieveError" message="tns:IGameService_RecieveError_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UsersOnLine">
+      <wsdl:output wsaw:Action="http://tempuri.org/IGameService/UsersOnLine" message="tns:IGameService_UsersOnLine_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResultActionfromLogout">
+      <wsdl:output wsaw:Action="http://tempuri.org/IGameService/ResultActionfromLogout" message="tns:IGameService_ResultActionfromLogout_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResultActionfromLogoin">
+      <wsdl:output wsaw:Action="http://tempuri.org/IGameService/ResultActionfromLogoin" message="tns:IGameService_ResultActionfromLogoin_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RecievePrivateMsg">
+      <wsdl:output wsaw:Action="http://tempuri.org/IGameService/RecievePrivateMsg" message="tns:IGameService_RecievePrivateMsg_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PrivateChatStart">
+      <wsdl:output wsaw:Action="http://tempuri.org/IGameService/PrivateChatStart" message="tns:IGameService_PrivateChatStart_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PrivateChatStartFromOpponent">
+      <wsdl:output wsaw:Action="http://tempuri.org/IGameService/PrivateChatStartFromOpponent" message="tns:IGameService_PrivateChatStartFromOpponent_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PrivateChatSlose">
+      <wsdl:output wsaw:Action="http://tempuri.org/IGameService/PrivateChatSlose" message="tns:IGameService_PrivateChatSlose_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RequestGameFromServer">
+      <wsdl:output wsaw:Action="http://tempuri.org/IGameService/RequestGameFromServer" message="tns:IGameService_RequestGameFromServer_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StartGameFromServer">
+      <wsdl:output wsaw:Action="http://tempuri.org/IGameService/StartGameFromServer" message="tns:IGameService_StartGameFromServer_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GameOverFromServer">
+      <wsdl:output wsaw:Action="http://tempuri.org/IGameService/GameOverFromServer" message="tns:IGameService_GameOverFromServer_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RecieveRoll">
+      <wsdl:output wsaw:Action="http://tempuri.org/IGameService/RecieveRoll" message="tns:IGameService_RecieveRoll_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RollEnableFromServer">
+      <wsdl:output wsaw:Action="http://tempuri.org/IGameService/RollEnableFromServer" message="tns:IGameService_RollEnableFromServer_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RollDisableFromServer">
+      <wsdl:output wsaw:Action="http://tempuri.org/IGameService/RollDisableFromServer" message="tns:IGameService_RollDisableFromServer_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MoveEnableFromServer">
+      <wsdl:output wsaw:Action="http://tempuri.org/IGameService/MoveEnableFromServer" message="tns:IGameService_MoveEnableFromServer_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GameInfoUpdateFromServer">
+      <wsdl:output wsaw:Action="http://tempuri.org/IGameService/GameInfoUpdateFromServer" message="tns:IGameService_GameInfoUpdateFromServer_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetMasterFromServer">
+      <wsdl:output wsaw:Action="http://tempuri.org/IGameService/SetMasterFromServer" message="tns:IGameService_SetMasterFromServer_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetWaiterFromServer">
+      <wsdl:output wsaw:Action="http://tempuri.org/IGameService/SetWaiterFromServer" message="tns:IGameService_SetWaiterFromServer_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MoveCheckerFromServer">
+      <wsdl:output wsaw:Action="http://tempuri.org/IGameService/MoveCheckerFromServer" message="tns:IGameService_MoveCheckerFromServer_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTable">
+      <wsdl:output wsaw:Action="http://tempuri.org/IGameService/UpdateTable" message="tns:IGameService_UpdateTable_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StartHowToFirstFromServer">
+      <wsdl:output wsaw:Action="http://tempuri.org/IGameService/StartHowToFirstFromServer" message="tns:IGameService_StartHowToFirstFromServer_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CloseHowToFirstFromServer">
+      <wsdl:output wsaw:Action="http://tempuri.org/IGameService/CloseHowToFirstFromServer" message="tns:IGameService_CloseHowToFirstFromServer_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RecieveRollHowFirst">
+      <wsdl:output wsaw:Action="http://tempuri.org/IGameService/RecieveRollHowFirst" message="tns:IGameService_RecieveRollHowFirst_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BackToChatFromServer">
+      <wsdl:output wsaw:Action="http://tempuri.org/IGameService/BackToChatFromServer" message="tns:IGameService_BackToChatFromServer_OutputCallbackMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Chat" type="tns:IChatService">
+    <wsp:PolicyReference URI="#Chat_policy" />
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="Register">
       <soap12:operation soapAction="http://tempuri.org/IChatService/Register" style="document" />
       <wsdl:input>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IChatService_Register_Input_policy" />
+        <wsp:PolicyReference URI="#Chat_Register_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
     </wsdl:operation>
     <wsdl:operation name="Login">
       <soap12:operation soapAction="http://tempuri.org/IChatService/Login" style="document" />
       <wsdl:input>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IChatService_Login_Input_policy" />
+        <wsp:PolicyReference URI="#Chat_Login_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
     </wsdl:operation>
     <wsdl:operation name="Logout">
       <soap12:operation soapAction="http://tempuri.org/IChatService/Logout" style="document" />
       <wsdl:input>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IChatService_Logout_Input_policy" />
+        <wsp:PolicyReference URI="#Chat_Logout_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
     </wsdl:operation>
     <wsdl:operation name="SendMessage">
       <soap12:operation soapAction="http://tempuri.org/IChatService/SendMessage" style="document" />
       <wsdl:input>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IChatService_SendMessage_Input_policy" />
+        <wsp:PolicyReference URI="#Chat_SendMessage_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
     </wsdl:operation>
     <wsdl:operation name="SendErrorMessage">
       <soap12:operation soapAction="http://tempuri.org/IChatService/SendErrorMessage" style="document" />
       <wsdl:input>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IChatService_SendErrorMessage_Input_policy" />
+        <wsp:PolicyReference URI="#Chat_SendErrorMessage_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
     </wsdl:operation>
     <wsdl:operation name="SendPrivateMsg">
       <soap12:operation soapAction="http://tempuri.org/IChatService/SendPrivateMsg" style="document" />
       <wsdl:input>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IChatService_SendPrivateMsg_Input_policy" />
+        <wsp:PolicyReference URI="#Chat_SendPrivateMsg_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
     </wsdl:operation>
     <wsdl:operation name="PrivateChat">
       <soap12:operation soapAction="http://tempuri.org/IChatService/PrivateChat" style="document" />
       <wsdl:input>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IChatService_PrivateChat_Input_policy" />
+        <wsp:PolicyReference URI="#Chat_PrivateChat_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
     </wsdl:operation>
     <wsdl:operation name="ExitPrivateChat">
       <soap12:operation soapAction="http://tempuri.org/IChatService/ExitPrivateChat" style="document" />
       <wsdl:input>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IChatService_ExitPrivateChat_Input_policy" />
+        <wsp:PolicyReference URI="#Chat_ExitPrivateChat_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
     </wsdl:operation>
     <wsdl:operation name="ConfirmationPrivateChat">
       <soap12:operation soapAction="http://tempuri.org/IChatService/ConfirmationPrivateChat" style="document" />
       <wsdl:input>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IChatService_ConfirmationPrivateChat_Input_policy" />
-        <soap12:body use="literal" />
-      </wsdl:input>
-    </wsdl:operation>
-    <wsdl:operation name="StartGame">
-      <soap12:operation soapAction="http://tempuri.org/IChatService/StartGame" style="document" />
-      <wsdl:input>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IChatService_StartGame_Input_policy" />
-        <soap12:body use="literal" />
-      </wsdl:input>
-    </wsdl:operation>
-    <wsdl:operation name="StartAutoPlayer">
-      <soap12:operation soapAction="http://tempuri.org/IChatService/StartAutoPlayer" style="document" />
-      <wsdl:input>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IChatService_StartAutoPlayer_Input_policy" />
-        <soap12:body use="literal" />
-      </wsdl:input>
-    </wsdl:operation>
-    <wsdl:operation name="RequestGame">
-      <soap12:operation soapAction="http://tempuri.org/IChatService/RequestGame" style="document" />
-      <wsdl:input>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IChatService_RequestGame_Input_policy" />
-        <soap12:body use="literal" />
-      </wsdl:input>
-    </wsdl:operation>
-    <wsdl:operation name="GameOver">
-      <soap12:operation soapAction="http://tempuri.org/IChatService/GameOver" style="document" />
-      <wsdl:input>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IChatService_GameOver_Input_policy" />
-        <soap12:body use="literal" />
-      </wsdl:input>
-    </wsdl:operation>
-    <wsdl:operation name="UserLeftGame">
-      <soap12:operation soapAction="http://tempuri.org/IChatService/UserLeftGame" style="document" />
-      <wsdl:input>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IChatService_UserLeftGame_Input_policy" />
-        <soap12:body use="literal" />
-      </wsdl:input>
-    </wsdl:operation>
-    <wsdl:operation name="Roll">
-      <soap12:operation soapAction="http://tempuri.org/IChatService/Roll" style="document" />
-      <wsdl:input>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IChatService_Roll_Input_policy" />
-        <soap12:body use="literal" />
-      </wsdl:input>
-    </wsdl:operation>
-    <wsdl:operation name="RollEnable">
-      <soap12:operation soapAction="http://tempuri.org/IChatService/RollEnable" style="document" />
-      <wsdl:input>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IChatService_RollEnable_Input_policy" />
-        <soap12:body use="literal" />
-      </wsdl:input>
-    </wsdl:operation>
-    <wsdl:operation name="RollDisable">
-      <soap12:operation soapAction="http://tempuri.org/IChatService/RollDisable" style="document" />
-      <wsdl:input>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IChatService_RollDisable_Input_policy" />
-        <soap12:body use="literal" />
-      </wsdl:input>
-    </wsdl:operation>
-    <wsdl:operation name="SetMaster">
-      <soap12:operation soapAction="http://tempuri.org/IChatService/SetMaster" style="document" />
-      <wsdl:input>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IChatService_SetMaster_Input_policy" />
-        <soap12:body use="literal" />
-      </wsdl:input>
-    </wsdl:operation>
-    <wsdl:operation name="GameInfoUpdate">
-      <soap12:operation soapAction="http://tempuri.org/IChatService/GameInfoUpdate" style="document" />
-      <wsdl:input>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IChatService_GameInfoUpdate_Input_policy" />
-        <soap12:body use="literal" />
-      </wsdl:input>
-    </wsdl:operation>
-    <wsdl:operation name="SetWaiter">
-      <soap12:operation soapAction="http://tempuri.org/IChatService/SetWaiter" style="document" />
-      <wsdl:input>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IChatService_SetWaiter_Input_policy" />
-        <soap12:body use="literal" />
-      </wsdl:input>
-    </wsdl:operation>
-    <wsdl:operation name="MoveChecker">
-      <soap12:operation soapAction="http://tempuri.org/IChatService/MoveChecker" style="document" />
-      <wsdl:input>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IChatService_MoveChecker_Input_policy" />
-        <soap12:body use="literal" />
-      </wsdl:input>
-    </wsdl:operation>
-    <wsdl:operation name="MoveCheckerFromBar">
-      <soap12:operation soapAction="http://tempuri.org/IChatService/MoveCheckerFromBar" style="document" />
-      <wsdl:input>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IChatService_MoveCheckerFromBar_Input_policy" />
-        <soap12:body use="literal" />
-      </wsdl:input>
-    </wsdl:operation>
-    <wsdl:operation name="GetGameTable">
-      <soap12:operation soapAction="http://tempuri.org/IChatService/GetGameTable" style="document" />
-      <wsdl:input>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IChatService_GetGameTable_Input_policy" />
-        <soap12:body use="literal" />
-      </wsdl:input>
-    </wsdl:operation>
-    <wsdl:operation name="RollHowFirst">
-      <soap12:operation soapAction="http://tempuri.org/IChatService/RollHowFirst" style="document" />
-      <wsdl:input>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IChatService_RollHowFirst_Input_policy" />
-        <soap12:body use="literal" />
-      </wsdl:input>
-    </wsdl:operation>
-    <wsdl:operation name="StartHowToFirst">
-      <soap12:operation soapAction="http://tempuri.org/IChatService/StartHowToFirst" style="document" />
-      <wsdl:input>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IChatService_StartHowToFirst_Input_policy" />
-        <soap12:body use="literal" />
-      </wsdl:input>
-    </wsdl:operation>
-    <wsdl:operation name="CloseHowToFirst">
-      <soap12:operation soapAction="http://tempuri.org/IChatService/CloseHowToFirst" style="document" />
-      <wsdl:input>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IChatService_CloseHowToFirst_Input_policy" />
+        <wsp:PolicyReference URI="#Chat_ConfirmationPrivateChat_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
     </wsdl:operation>
     <wsdl:operation name="BackToChat">
       <soap12:operation soapAction="http://tempuri.org/IChatService/BackToChat" style="document" />
       <wsdl:input>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IChatService_BackToChat_Input_policy" />
+        <wsp:PolicyReference URI="#Chat_BackToChat_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
     </wsdl:operation>
     <wsdl:operation name="RecieveMessage">
       <soap12:operation soapAction="http://tempuri.org/IChatService/RecieveMessage" style="document" />
       <wsdl:output>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IChatService_RecieveMessage_output_policy" />
+        <wsp:PolicyReference URI="#Chat_RecieveMessage_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="RecieveGameError">
       <soap12:operation soapAction="http://tempuri.org/IChatService/RecieveGameError" style="document" />
       <wsdl:output>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IChatService_RecieveGameError_output_policy" />
+        <wsp:PolicyReference URI="#Chat_RecieveGameError_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="RecieveError">
       <soap12:operation soapAction="http://tempuri.org/IChatService/RecieveError" style="document" />
       <wsdl:output>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IChatService_RecieveError_output_policy" />
+        <wsp:PolicyReference URI="#Chat_RecieveError_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="UsersOnLine">
       <soap12:operation soapAction="http://tempuri.org/IChatService/UsersOnLine" style="document" />
       <wsdl:output>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IChatService_UsersOnLine_output_policy" />
+        <wsp:PolicyReference URI="#Chat_UsersOnLine_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ResultActionfromLogout">
       <soap12:operation soapAction="http://tempuri.org/IChatService/ResultActionfromLogout" style="document" />
       <wsdl:output>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IChatService_ResultActionfromLogout_output_policy" />
+        <wsp:PolicyReference URI="#Chat_ResultActionfromLogout_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ResultActionfromLogoin">
       <soap12:operation soapAction="http://tempuri.org/IChatService/ResultActionfromLogoin" style="document" />
       <wsdl:output>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IChatService_ResultActionfromLogoin_output_policy" />
+        <wsp:PolicyReference URI="#Chat_ResultActionfromLogoin_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="RecievePrivateMsg">
       <soap12:operation soapAction="http://tempuri.org/IChatService/RecievePrivateMsg" style="document" />
       <wsdl:output>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IChatService_RecievePrivateMsg_output_policy" />
+        <wsp:PolicyReference URI="#Chat_RecievePrivateMsg_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="PrivateChatStart">
       <soap12:operation soapAction="http://tempuri.org/IChatService/PrivateChatStart" style="document" />
       <wsdl:output>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IChatService_PrivateChatStart_output_policy" />
+        <wsp:PolicyReference URI="#Chat_PrivateChatStart_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="PrivateChatStartFromOpponent">
       <soap12:operation soapAction="http://tempuri.org/IChatService/PrivateChatStartFromOpponent" style="document" />
       <wsdl:output>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IChatService_PrivateChatStartFromOpponent_output_policy" />
+        <wsp:PolicyReference URI="#Chat_PrivateChatStartFromOpponent_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="PrivateChatSlose">
       <soap12:operation soapAction="http://tempuri.org/IChatService/PrivateChatSlose" style="document" />
       <wsdl:output>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IChatService_PrivateChatSlose_output_policy" />
+        <wsp:PolicyReference URI="#Chat_PrivateChatSlose_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="RequestGameFromServer">
       <soap12:operation soapAction="http://tempuri.org/IChatService/RequestGameFromServer" style="document" />
       <wsdl:output>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IChatService_RequestGameFromServer_output_policy" />
+        <wsp:PolicyReference URI="#Chat_RequestGameFromServer_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="StartGameFromServer">
       <soap12:operation soapAction="http://tempuri.org/IChatService/StartGameFromServer" style="document" />
       <wsdl:output>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IChatService_StartGameFromServer_output_policy" />
+        <wsp:PolicyReference URI="#Chat_StartGameFromServer_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GameOverFromServer">
       <soap12:operation soapAction="http://tempuri.org/IChatService/GameOverFromServer" style="document" />
       <wsdl:output>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IChatService_GameOverFromServer_output_policy" />
+        <wsp:PolicyReference URI="#Chat_GameOverFromServer_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="RecieveRoll">
       <soap12:operation soapAction="http://tempuri.org/IChatService/RecieveRoll" style="document" />
       <wsdl:output>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IChatService_RecieveRoll_output_policy" />
+        <wsp:PolicyReference URI="#Chat_RecieveRoll_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="RollEnableFromServer">
       <soap12:operation soapAction="http://tempuri.org/IChatService/RollEnableFromServer" style="document" />
       <wsdl:output>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IChatService_RollEnableFromServer_output_policy" />
+        <wsp:PolicyReference URI="#Chat_RollEnableFromServer_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="RollDisableFromServer">
       <soap12:operation soapAction="http://tempuri.org/IChatService/RollDisableFromServer" style="document" />
       <wsdl:output>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IChatService_RollDisableFromServer_output_policy" />
+        <wsp:PolicyReference URI="#Chat_RollDisableFromServer_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="MoveEnableFromServer">
       <soap12:operation soapAction="http://tempuri.org/IChatService/MoveEnableFromServer" style="document" />
       <wsdl:output>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IChatService_MoveEnableFromServer_output_policy" />
+        <wsp:PolicyReference URI="#Chat_MoveEnableFromServer_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GameInfoUpdateFromServer">
       <soap12:operation soapAction="http://tempuri.org/IChatService/GameInfoUpdateFromServer" style="document" />
       <wsdl:output>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IChatService_GameInfoUpdateFromServer_output_policy" />
+        <wsp:PolicyReference URI="#Chat_GameInfoUpdateFromServer_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="SetMasterFromServer">
       <soap12:operation soapAction="http://tempuri.org/IChatService/SetMasterFromServer" style="document" />
       <wsdl:output>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IChatService_SetMasterFromServer_output_policy" />
+        <wsp:PolicyReference URI="#Chat_SetMasterFromServer_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="SetWaiterFromServer">
       <soap12:operation soapAction="http://tempuri.org/IChatService/SetWaiterFromServer" style="document" />
       <wsdl:output>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IChatService_SetWaiterFromServer_output_policy" />
+        <wsp:PolicyReference URI="#Chat_SetWaiterFromServer_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="MoveCheckerFromServer">
       <soap12:operation soapAction="http://tempuri.org/IChatService/MoveCheckerFromServer" style="document" />
       <wsdl:output>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IChatService_MoveCheckerFromServer_output_policy" />
+        <wsp:PolicyReference URI="#Chat_MoveCheckerFromServer_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="UpdateTable">
       <soap12:operation soapAction="http://tempuri.org/IChatService/UpdateTable" style="document" />
       <wsdl:output>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IChatService_UpdateTable_output_policy" />
+        <wsp:PolicyReference URI="#Chat_UpdateTable_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="StartHowToFirstFromServer">
       <soap12:operation soapAction="http://tempuri.org/IChatService/StartHowToFirstFromServer" style="document" />
       <wsdl:output>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IChatService_StartHowToFirstFromServer_output_policy" />
+        <wsp:PolicyReference URI="#Chat_StartHowToFirstFromServer_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="CloseHowToFirstFromServer">
       <soap12:operation soapAction="http://tempuri.org/IChatService/CloseHowToFirstFromServer" style="document" />
       <wsdl:output>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IChatService_CloseHowToFirstFromServer_output_policy" />
+        <wsp:PolicyReference URI="#Chat_CloseHowToFirstFromServer_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="RecieveRollHowFirst">
       <soap12:operation soapAction="http://tempuri.org/IChatService/RecieveRollHowFirst" style="document" />
       <wsdl:output>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IChatService_RecieveRollHowFirst_output_policy" />
+        <wsp:PolicyReference URI="#Chat_RecieveRollHowFirst_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="BackToChatFromServer">
       <soap12:operation soapAction="http://tempuri.org/IChatService/BackToChatFromServer" style="document" />
       <wsdl:output>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IChatService_BackToChatFromServer_output_policy" />
+        <wsp:PolicyReference URI="#Chat_BackToChatFromServer_output_policy" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Game" type="tns:IGameService">
+    <wsp:PolicyReference URI="#Game_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="StartGame">
+      <soap12:operation soapAction="http://tempuri.org/IGameService/StartGame" style="document" />
+      <wsdl:input>
+        <wsp:PolicyReference URI="#Game_StartGame_Input_policy" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="StartAutoPlayer">
+      <soap12:operation soapAction="http://tempuri.org/IGameService/StartAutoPlayer" style="document" />
+      <wsdl:input>
+        <wsp:PolicyReference URI="#Game_StartAutoPlayer_Input_policy" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="RequestGame">
+      <soap12:operation soapAction="http://tempuri.org/IGameService/RequestGame" style="document" />
+      <wsdl:input>
+        <wsp:PolicyReference URI="#Game_RequestGame_Input_policy" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="GameOver">
+      <soap12:operation soapAction="http://tempuri.org/IGameService/GameOver" style="document" />
+      <wsdl:input>
+        <wsp:PolicyReference URI="#Game_GameOver_Input_policy" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="UserLeftGame">
+      <soap12:operation soapAction="http://tempuri.org/IGameService/UserLeftGame" style="document" />
+      <wsdl:input>
+        <wsp:PolicyReference URI="#Game_UserLeftGame_Input_policy" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="Roll">
+      <soap12:operation soapAction="http://tempuri.org/IGameService/Roll" style="document" />
+      <wsdl:input>
+        <wsp:PolicyReference URI="#Game_Roll_Input_policy" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="RollEnable">
+      <soap12:operation soapAction="http://tempuri.org/IGameService/RollEnable" style="document" />
+      <wsdl:input>
+        <wsp:PolicyReference URI="#Game_RollEnable_Input_policy" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="RollDisable">
+      <soap12:operation soapAction="http://tempuri.org/IGameService/RollDisable" style="document" />
+      <wsdl:input>
+        <wsp:PolicyReference URI="#Game_RollDisable_Input_policy" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="SetMaster">
+      <soap12:operation soapAction="http://tempuri.org/IGameService/SetMaster" style="document" />
+      <wsdl:input>
+        <wsp:PolicyReference URI="#Game_SetMaster_Input_policy" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="GameInfoUpdate">
+      <soap12:operation soapAction="http://tempuri.org/IGameService/GameInfoUpdate" style="document" />
+      <wsdl:input>
+        <wsp:PolicyReference URI="#Game_GameInfoUpdate_Input_policy" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="SetWaiter">
+      <soap12:operation soapAction="http://tempuri.org/IGameService/SetWaiter" style="document" />
+      <wsdl:input>
+        <wsp:PolicyReference URI="#Game_SetWaiter_Input_policy" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="MoveChecker">
+      <soap12:operation soapAction="http://tempuri.org/IGameService/MoveChecker" style="document" />
+      <wsdl:input>
+        <wsp:PolicyReference URI="#Game_MoveChecker_Input_policy" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="MoveCheckerFromBar">
+      <soap12:operation soapAction="http://tempuri.org/IGameService/MoveCheckerFromBar" style="document" />
+      <wsdl:input>
+        <wsp:PolicyReference URI="#Game_MoveCheckerFromBar_Input_policy" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="GetGameTable">
+      <soap12:operation soapAction="http://tempuri.org/IGameService/GetGameTable" style="document" />
+      <wsdl:input>
+        <wsp:PolicyReference URI="#Game_GetGameTable_Input_policy" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="RollHowFirst">
+      <soap12:operation soapAction="http://tempuri.org/IGameService/RollHowFirst" style="document" />
+      <wsdl:input>
+        <wsp:PolicyReference URI="#Game_RollHowFirst_Input_policy" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="StartHowToFirst">
+      <soap12:operation soapAction="http://tempuri.org/IGameService/StartHowToFirst" style="document" />
+      <wsdl:input>
+        <wsp:PolicyReference URI="#Game_StartHowToFirst_Input_policy" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="CloseHowToFirst">
+      <soap12:operation soapAction="http://tempuri.org/IGameService/CloseHowToFirst" style="document" />
+      <wsdl:input>
+        <wsp:PolicyReference URI="#Game_CloseHowToFirst_Input_policy" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="RecieveMessage">
+      <soap12:operation soapAction="http://tempuri.org/IGameService/RecieveMessage" style="document" />
+      <wsdl:output>
+        <wsp:PolicyReference URI="#Game_RecieveMessage_output_policy" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecieveGameError">
+      <soap12:operation soapAction="http://tempuri.org/IGameService/RecieveGameError" style="document" />
+      <wsdl:output>
+        <wsp:PolicyReference URI="#Game_RecieveGameError_output_policy" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecieveError">
+      <soap12:operation soapAction="http://tempuri.org/IGameService/RecieveError" style="document" />
+      <wsdl:output>
+        <wsp:PolicyReference URI="#Game_RecieveError_output_policy" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UsersOnLine">
+      <soap12:operation soapAction="http://tempuri.org/IGameService/UsersOnLine" style="document" />
+      <wsdl:output>
+        <wsp:PolicyReference URI="#Game_UsersOnLine_output_policy" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResultActionfromLogout">
+      <soap12:operation soapAction="http://tempuri.org/IGameService/ResultActionfromLogout" style="document" />
+      <wsdl:output>
+        <wsp:PolicyReference URI="#Game_ResultActionfromLogout_output_policy" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResultActionfromLogoin">
+      <soap12:operation soapAction="http://tempuri.org/IGameService/ResultActionfromLogoin" style="document" />
+      <wsdl:output>
+        <wsp:PolicyReference URI="#Game_ResultActionfromLogoin_output_policy" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecievePrivateMsg">
+      <soap12:operation soapAction="http://tempuri.org/IGameService/RecievePrivateMsg" style="document" />
+      <wsdl:output>
+        <wsp:PolicyReference URI="#Game_RecievePrivateMsg_output_policy" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrivateChatStart">
+      <soap12:operation soapAction="http://tempuri.org/IGameService/PrivateChatStart" style="document" />
+      <wsdl:output>
+        <wsp:PolicyReference URI="#Game_PrivateChatStart_output_policy" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrivateChatStartFromOpponent">
+      <soap12:operation soapAction="http://tempuri.org/IGameService/PrivateChatStartFromOpponent" style="document" />
+      <wsdl:output>
+        <wsp:PolicyReference URI="#Game_PrivateChatStartFromOpponent_output_policy" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrivateChatSlose">
+      <soap12:operation soapAction="http://tempuri.org/IGameService/PrivateChatSlose" style="document" />
+      <wsdl:output>
+        <wsp:PolicyReference URI="#Game_PrivateChatSlose_output_policy" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RequestGameFromServer">
+      <soap12:operation soapAction="http://tempuri.org/IGameService/RequestGameFromServer" style="document" />
+      <wsdl:output>
+        <wsp:PolicyReference URI="#Game_RequestGameFromServer_output_policy" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StartGameFromServer">
+      <soap12:operation soapAction="http://tempuri.org/IGameService/StartGameFromServer" style="document" />
+      <wsdl:output>
+        <wsp:PolicyReference URI="#Game_StartGameFromServer_output_policy" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GameOverFromServer">
+      <soap12:operation soapAction="http://tempuri.org/IGameService/GameOverFromServer" style="document" />
+      <wsdl:output>
+        <wsp:PolicyReference URI="#Game_GameOverFromServer_output_policy" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecieveRoll">
+      <soap12:operation soapAction="http://tempuri.org/IGameService/RecieveRoll" style="document" />
+      <wsdl:output>
+        <wsp:PolicyReference URI="#Game_RecieveRoll_output_policy" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RollEnableFromServer">
+      <soap12:operation soapAction="http://tempuri.org/IGameService/RollEnableFromServer" style="document" />
+      <wsdl:output>
+        <wsp:PolicyReference URI="#Game_RollEnableFromServer_output_policy" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RollDisableFromServer">
+      <soap12:operation soapAction="http://tempuri.org/IGameService/RollDisableFromServer" style="document" />
+      <wsdl:output>
+        <wsp:PolicyReference URI="#Game_RollDisableFromServer_output_policy" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MoveEnableFromServer">
+      <soap12:operation soapAction="http://tempuri.org/IGameService/MoveEnableFromServer" style="document" />
+      <wsdl:output>
+        <wsp:PolicyReference URI="#Game_MoveEnableFromServer_output_policy" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GameInfoUpdateFromServer">
+      <soap12:operation soapAction="http://tempuri.org/IGameService/GameInfoUpdateFromServer" style="document" />
+      <wsdl:output>
+        <wsp:PolicyReference URI="#Game_GameInfoUpdateFromServer_output_policy" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMasterFromServer">
+      <soap12:operation soapAction="http://tempuri.org/IGameService/SetMasterFromServer" style="document" />
+      <wsdl:output>
+        <wsp:PolicyReference URI="#Game_SetMasterFromServer_output_policy" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetWaiterFromServer">
+      <soap12:operation soapAction="http://tempuri.org/IGameService/SetWaiterFromServer" style="document" />
+      <wsdl:output>
+        <wsp:PolicyReference URI="#Game_SetWaiterFromServer_output_policy" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MoveCheckerFromServer">
+      <soap12:operation soapAction="http://tempuri.org/IGameService/MoveCheckerFromServer" style="document" />
+      <wsdl:output>
+        <wsp:PolicyReference URI="#Game_MoveCheckerFromServer_output_policy" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTable">
+      <soap12:operation soapAction="http://tempuri.org/IGameService/UpdateTable" style="document" />
+      <wsdl:output>
+        <wsp:PolicyReference URI="#Game_UpdateTable_output_policy" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StartHowToFirstFromServer">
+      <soap12:operation soapAction="http://tempuri.org/IGameService/StartHowToFirstFromServer" style="document" />
+      <wsdl:output>
+        <wsp:PolicyReference URI="#Game_StartHowToFirstFromServer_output_policy" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CloseHowToFirstFromServer">
+      <soap12:operation soapAction="http://tempuri.org/IGameService/CloseHowToFirstFromServer" style="document" />
+      <wsdl:output>
+        <wsp:PolicyReference URI="#Game_CloseHowToFirstFromServer_output_policy" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecieveRollHowFirst">
+      <soap12:operation soapAction="http://tempuri.org/IGameService/RecieveRollHowFirst" style="document" />
+      <wsdl:output>
+        <wsp:PolicyReference URI="#Game_RecieveRollHowFirst_output_policy" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BackToChatFromServer">
+      <soap12:operation soapAction="http://tempuri.org/IGameService/BackToChatFromServer" style="document" />
+      <wsdl:output>
+        <wsp:PolicyReference URI="#Game_BackToChatFromServer_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="Service">
-    <wsdl:port name="WSDualHttpBinding_IChatService" binding="tns:WSDualHttpBinding_IChatService">
+    <wsdl:port name="Chat" binding="tns:Chat">
       <soap12:address location="http://localhost/:8952/Chat" />
       <wsa10:EndpointReference>
         <wsa10:Address>http://localhost/:8952/Chat</wsa10:Address>
         <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
-          <Upn>MICHAEL-PC\bobyy</Upn>
+          <Upn>MICHAEL-LAPTOP\michael</Upn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="Game" binding="tns:Game">
+      <soap12:address location="http://localhost/:9000/Game" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://localhost/:9000/Game</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Upn>MICHAEL-LAPTOP\michael</Upn>
         </Identity>
       </wsa10:EndpointReference>
     </wsdl:port>

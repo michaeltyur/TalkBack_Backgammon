@@ -21,12 +21,14 @@ namespace Client.Windows
     {
         private  string User { get; }
         private  string Opponent { get; }
-        private ChatServer.ChatServiceClient Host { get; }
+        private TalkBackService.IChatService ChatHost { get; }
+        private TalkBackService.IGameService GameHost { get; }
 
         public PrivateChat(string user,string opponent)
         {
             InitializeComponent();
-            Host = ClientInstances.Instance.Host;
+            ChatHost = ClientInstances.Instance.Chat.ChatHost;
+            GameHost = ClientInstances.Instance.Chat.GameHost;
             User = user;
             Opponent = opponent;
             howToChat.Text = TopMenu.GetHelpForPrChat();
@@ -58,7 +60,7 @@ namespace Client.Windows
         private void GameButton_Click(object sender, RoutedEventArgs e)
         {
             gameButton.IsEnabled = false;
-            Host.RequestGameAsync(User, Opponent);
+            GameHost.RequestGameAsync(User, Opponent);
         }
 
         //Recieve Message
@@ -80,9 +82,9 @@ namespace Client.Windows
 
             if (msg != string.Empty && User != string.Empty && Opponent != string.Empty)
             {
-                Host.SendPrivateMsgAsync(User, Opponent, msg);
+                ChatHost.SendPrivateMsgAsync(User, Opponent, msg);
             }
-            else Host.SendPrivateMsgAsync("ghost", "ghost", msg);
+            else ChatHost.SendPrivateMsgAsync("ghost", "ghost", msg);
 
             sendTextBox.Text = string.Empty;
         }
@@ -96,7 +98,7 @@ namespace Client.Windows
             }
             ClientInstances.Instance.Chat.UpdateUserList();
 
-            Host.ExitPrivateChatAsync(User, Opponent);
+            ChatHost.ExitPrivateChatAsync(User, Opponent);
 
             Close();
         }

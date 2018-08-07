@@ -15,7 +15,7 @@ namespace Client
     /// <summary>
     /// Сontains methods that send and receive information from the server.
     /// </summary>
-    public class ClientCallback : ChatServer.IChatServiceCallback
+    public class ClientCallback : TalkBackService.IChatServiceCallback, TalkBackService.IGameServiceCallback
     {
         #region Errors
         //public void ErrorUserAlreadyOnline(string error)
@@ -73,10 +73,10 @@ namespace Client
                 {
                     ClientInstances.Instance.PrivateChats.Add(opponentName, new PrivateChat(userName, opponentName));
                 }
-                ClientInstances.Instance.Chat.Host.ConfirmationPrivateChatAsync(userName, opponentName);
+                ClientInstances.Instance.Chat.ChatHost.ConfirmationPrivateChatAsync(userName, opponentName);
                 ClientInstances.Instance.Chat.UpdateUserList();
             }
-            else ClientInstances.Instance.Chat.Host.SendErrorMessage(opponentName, $"The user {userName} not want to chat with you");
+            else ClientInstances.Instance.Chat.ChatHost.SendErrorMessage(opponentName, $"The user {userName} not want to chat with you");
         }
 
         public void PrivateChatStartFromOpponent(string userName, string opponentName)
@@ -154,24 +154,21 @@ namespace Client
         {
             if (!string.IsNullOrEmpty(user) && !string.IsNullOrEmpty(opponent))
             {
-                var host = ClientInstances.Instance.Chat.Host;
+                var chatHost = ClientInstances.Instance.Chat.ChatHost;
+                var gameHost = ClientInstances.Instance.Chat.GameHost;
 
                 MessageBoxResult messageBoxResult = MessageBox.Show($"Do you want to start the game with {opponent} ?", "Game Confirmation", MessageBoxButton.YesNo);
                 if (messageBoxResult == MessageBoxResult.Yes)
                 {
-                    //if (ClientInstances.Instance.PrivateChats.ContainsKey(opponent))
-                    //{
-                    //    ClientInstances.Instance.PrivateChats[opponent]._gameButton.IsEnabled = false;
-                    //}
                     if (!ClientInstances.Instance.HowFirstsList.ContainsKey(opponent))
                     {
-                        host.StartHowToFirstAsync(user, opponent);
+                        gameHost.StartHowToFirstAsync(user, opponent);
                         if (ClientInstances.Instance.Chat != null)
                             ClientInstances.Instance.Chat.UpdateUserList();
                     }
                     else messageBoxResult = MessageBox.Show($"You can't start same game again", "Warning!!!");
                 }
-                else ClientInstances.Instance.Chat.Host.SendErrorMessage(opponent, $"The user {user} not want to game with you");
+                else chatHost.SendErrorMessage(opponent, $"The user {user} not want to game with you");
             }
 
         }

@@ -83,7 +83,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="ClientInstances.cs" />
-    <Compile Include="Connected Services\ChatServer\Reference.cs">
+    <Compile Include="Connected Services\TalkBackService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -193,16 +193,16 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Connected Services\ChatServer\ChatServer.xsd">
+    <None Include="Connected Services\TalkBackService\BackTalkServer.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ChatServer\ChatServer1.xsd">
+    <None Include="Connected Services\TalkBackService\BackTalkServer1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ChatServer\ChatServer2.xsd">
+    <None Include="Connected Services\TalkBackService\BackTalkServer2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ChatServer\Service.wsdl" />
+    <None Include="Connected Services\TalkBackService\Service.wsdl" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -222,24 +222,6 @@
       <Project>{EF248FFD-9BB3-4F03-999C-2A2C684E5BB2}</Project>
       <Name>Common</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\ChatServer\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\ChatServer\ChatServer.disco" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\ChatServer\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\ChatServer\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\ChatServer\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="chaticon.ico" />
@@ -279,7 +261,6 @@
     <Resource Include="Images\dice5.png" />
     <Resource Include="Images\dice6.png" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Resource Include="Images\GameOver\loser2.jpg" />
     <Resource Include="Images\GameOver\winner2.jpg" />
@@ -291,6 +272,24 @@
   <ItemGroup>
     <Resource Include="Images\GameOver\loser1.jpg" />
     <Resource Include="Images\GameOver\loser3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\TalkBackService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\TalkBackService\BackTalkServer.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\TalkBackService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\TalkBackService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\TalkBackService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

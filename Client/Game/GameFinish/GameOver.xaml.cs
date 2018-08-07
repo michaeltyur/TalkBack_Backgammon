@@ -1,5 +1,4 @@
-﻿using Client.ChatServer;
-using Client.Game.GameData;
+﻿using Client.Game.GameData;
 using Client.Game.GameOver;
 using System;
 using System.Threading;

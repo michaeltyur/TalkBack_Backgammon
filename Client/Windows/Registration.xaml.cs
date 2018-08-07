@@ -1,4 +1,4 @@
-﻿using Client.ChatServer;
+﻿using Client.TalkBackService;
 using System;
 using System.Windows;
 using System.Windows.Input;
@@ -12,11 +12,12 @@ namespace Client.Windows
     public partial class Registration : Window
     {
         private DispatcherTimer Timer;
-        private ChatServiceClient Host { get; }
+        private IChatService ChatHost { get; }
 
         public Registration()
         {
-            Host = ClientInstances.Instance.Host;
+            ChatHost = ClientInstances.Instance.Chat.ChatHost;
+
             InitializeComponent();
 
             //Set help and about text
@@ -78,7 +79,7 @@ namespace Client.Windows
 
             if (_userName != string.Empty && _pass != string.Empty && _firstName != string.Empty && _lastName != string.Empty)
             {
-                Host.RegisterAsync(_userName, _pass, _firstName, _lastName);
+                ChatHost.RegisterAsync(_userName, _pass, _firstName, _lastName);
                 ButtonsOnOff();
             }
             else messageBoxResult = MessageBox.Show("One or more fields is empty", "Warning");

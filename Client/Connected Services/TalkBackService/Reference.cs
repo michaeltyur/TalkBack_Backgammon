@@ -8,11 +8,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Client.ChatServer {
+namespace Client.TalkBackService {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ChatServer.IChatService", CallbackContract=typeof(Client.ChatServer.IChatServiceCallback))]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="TalkBackService.IChatService", CallbackContract=typeof(Client.TalkBackService.IChatServiceCallback))]
     public interface IChatService {
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IChatService/Register")]
@@ -68,108 +68,6 @@ namespace Client.ChatServer {
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IChatService/ConfirmationPrivateChat")]
         System.Threading.Tasks.Task ConfirmationPrivateChatAsync(string userName, string opponentName);
-        
-        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IChatService/StartGame")]
-        void StartGame(string userName, string opponentName, bool master);
-        
-        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IChatService/StartGame")]
-        System.Threading.Tasks.Task StartGameAsync(string userName, string opponentName, bool master);
-        
-        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IChatService/StartAutoPlayer")]
-        void StartAutoPlayer(string userName);
-        
-        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IChatService/StartAutoPlayer")]
-        System.Threading.Tasks.Task StartAutoPlayerAsync(string userName);
-        
-        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IChatService/RequestGame")]
-        void RequestGame(string userName, string opponentName);
-        
-        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IChatService/RequestGame")]
-        System.Threading.Tasks.Task RequestGameAsync(string userName, string opponentName);
-        
-        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IChatService/GameOver")]
-        void GameOver(string userName, string opponentName);
-        
-        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IChatService/GameOver")]
-        System.Threading.Tasks.Task GameOverAsync(string userName, string opponentName);
-        
-        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IChatService/UserLeftGame")]
-        void UserLeftGame(string userName, string opponentName);
-        
-        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IChatService/UserLeftGame")]
-        System.Threading.Tasks.Task UserLeftGameAsync(string userName, string opponentName);
-        
-        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IChatService/Roll")]
-        void Roll(string user, string opponent);
-        
-        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IChatService/Roll")]
-        System.Threading.Tasks.Task RollAsync(string user, string opponent);
-        
-        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IChatService/RollEnable")]
-        void RollEnable(string user, string opponent);
-        
-        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IChatService/RollEnable")]
-        System.Threading.Tasks.Task RollEnableAsync(string user, string opponent);
-        
-        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IChatService/RollDisable")]
-        void RollDisable(string user, string opponent);
-        
-        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IChatService/RollDisable")]
-        System.Threading.Tasks.Task RollDisableAsync(string user, string opponent);
-        
-        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IChatService/SetMaster")]
-        void SetMaster(string user, string opponent);
-        
-        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IChatService/SetMaster")]
-        System.Threading.Tasks.Task SetMasterAsync(string user, string opponent);
-        
-        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IChatService/GameInfoUpdate")]
-        void GameInfoUpdate(string user, string opponent, string content);
-        
-        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IChatService/GameInfoUpdate")]
-        System.Threading.Tasks.Task GameInfoUpdateAsync(string user, string opponent, string content);
-        
-        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IChatService/SetWaiter")]
-        void SetWaiter(string user, string opponent);
-        
-        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IChatService/SetWaiter")]
-        System.Threading.Tasks.Task SetWaiterAsync(string user, string opponent);
-        
-        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IChatService/MoveChecker")]
-        void MoveChecker(string user, string opponent, int currIndex, int number);
-        
-        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IChatService/MoveChecker")]
-        System.Threading.Tasks.Task MoveCheckerAsync(string user, string opponent, int currIndex, int number);
-        
-        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IChatService/MoveCheckerFromBar")]
-        void MoveCheckerFromBar(string user, string opponent, int currIndex, int number);
-        
-        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IChatService/MoveCheckerFromBar")]
-        System.Threading.Tasks.Task MoveCheckerFromBarAsync(string user, string opponent, int currIndex, int number);
-        
-        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IChatService/GetGameTable")]
-        void GetGameTable(string user, string opponent);
-        
-        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IChatService/GetGameTable")]
-        System.Threading.Tasks.Task GetGameTableAsync(string user, string opponent);
-        
-        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IChatService/RollHowFirst")]
-        void RollHowFirst(string user, string opponent);
-        
-        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IChatService/RollHowFirst")]
-        System.Threading.Tasks.Task RollHowFirstAsync(string user, string opponent);
-        
-        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IChatService/StartHowToFirst")]
-        void StartHowToFirst(string userName, string opponentName);
-        
-        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IChatService/StartHowToFirst")]
-        System.Threading.Tasks.Task StartHowToFirstAsync(string userName, string opponentName);
-        
-        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IChatService/CloseHowToFirst")]
-        void CloseHowToFirst(string userName, string opponentName);
-        
-        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IChatService/CloseHowToFirst")]
-        System.Threading.Tasks.Task CloseHowToFirstAsync(string userName, string opponentName);
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IChatService/BackToChat")]
         void BackToChat(string user, string opponent);
@@ -261,12 +159,12 @@ namespace Client.ChatServer {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IChatServiceChannel : Client.ChatServer.IChatService, System.ServiceModel.IClientChannel {
+    public interface IChatServiceChannel : Client.TalkBackService.IChatService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class ChatServiceClient : System.ServiceModel.DuplexClientBase<Client.ChatServer.IChatService>, Client.ChatServer.IChatService {
+    public partial class ChatServiceClient : System.ServiceModel.DuplexClientBase<Client.TalkBackService.IChatService>, Client.TalkBackService.IChatService {
         
         public ChatServiceClient(System.ServiceModel.InstanceContext callbackInstance) : 
                 base(callbackInstance) {
@@ -358,6 +256,232 @@ namespace Client.ChatServer {
         
         public System.Threading.Tasks.Task ConfirmationPrivateChatAsync(string userName, string opponentName) {
             return base.Channel.ConfirmationPrivateChatAsync(userName, opponentName);
+        }
+        
+        public void BackToChat(string user, string opponent) {
+            base.Channel.BackToChat(user, opponent);
+        }
+        
+        public System.Threading.Tasks.Task BackToChatAsync(string user, string opponent) {
+            return base.Channel.BackToChatAsync(user, opponent);
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="TalkBackService.IGameService", CallbackContract=typeof(Client.TalkBackService.IGameServiceCallback))]
+    public interface IGameService {
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/StartGame")]
+        void StartGame(string userName, string opponentName, bool master);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/StartGame")]
+        System.Threading.Tasks.Task StartGameAsync(string userName, string opponentName, bool master);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/StartAutoPlayer")]
+        void StartAutoPlayer(string userName);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/StartAutoPlayer")]
+        System.Threading.Tasks.Task StartAutoPlayerAsync(string userName);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/RequestGame")]
+        void RequestGame(string userName, string opponentName);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/RequestGame")]
+        System.Threading.Tasks.Task RequestGameAsync(string userName, string opponentName);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/GameOver")]
+        void GameOver(string userName, string opponentName);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/GameOver")]
+        System.Threading.Tasks.Task GameOverAsync(string userName, string opponentName);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/UserLeftGame")]
+        void UserLeftGame(string userName, string opponentName);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/UserLeftGame")]
+        System.Threading.Tasks.Task UserLeftGameAsync(string userName, string opponentName);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/Roll")]
+        void Roll(string user, string opponent);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/Roll")]
+        System.Threading.Tasks.Task RollAsync(string user, string opponent);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/RollEnable")]
+        void RollEnable(string user, string opponent);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/RollEnable")]
+        System.Threading.Tasks.Task RollEnableAsync(string user, string opponent);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/RollDisable")]
+        void RollDisable(string user, string opponent);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/RollDisable")]
+        System.Threading.Tasks.Task RollDisableAsync(string user, string opponent);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/SetMaster")]
+        void SetMaster(string user, string opponent);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/SetMaster")]
+        System.Threading.Tasks.Task SetMasterAsync(string user, string opponent);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/GameInfoUpdate")]
+        void GameInfoUpdate(string user, string opponent, string content);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/GameInfoUpdate")]
+        System.Threading.Tasks.Task GameInfoUpdateAsync(string user, string opponent, string content);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/SetWaiter")]
+        void SetWaiter(string user, string opponent);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/SetWaiter")]
+        System.Threading.Tasks.Task SetWaiterAsync(string user, string opponent);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/MoveChecker")]
+        void MoveChecker(string user, string opponent, int currIndex, int number);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/MoveChecker")]
+        System.Threading.Tasks.Task MoveCheckerAsync(string user, string opponent, int currIndex, int number);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/MoveCheckerFromBar")]
+        void MoveCheckerFromBar(string user, string opponent, int currIndex, int number);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/MoveCheckerFromBar")]
+        System.Threading.Tasks.Task MoveCheckerFromBarAsync(string user, string opponent, int currIndex, int number);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/GetGameTable")]
+        void GetGameTable(string user, string opponent);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/GetGameTable")]
+        System.Threading.Tasks.Task GetGameTableAsync(string user, string opponent);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/RollHowFirst")]
+        void RollHowFirst(string user, string opponent);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/RollHowFirst")]
+        System.Threading.Tasks.Task RollHowFirstAsync(string user, string opponent);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/StartHowToFirst")]
+        void StartHowToFirst(string userName, string opponentName);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/StartHowToFirst")]
+        System.Threading.Tasks.Task StartHowToFirstAsync(string userName, string opponentName);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/CloseHowToFirst")]
+        void CloseHowToFirst(string userName, string opponentName);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/CloseHowToFirst")]
+        System.Threading.Tasks.Task CloseHowToFirstAsync(string userName, string opponentName);
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public interface IGameServiceCallback {
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/RecieveMessage")]
+        void RecieveMessage(string userName, string text);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/RecieveGameError")]
+        void RecieveGameError(string text);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/RecieveError")]
+        void RecieveError(string error);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/UsersOnLine")]
+        void UsersOnLine([System.ServiceModel.MessageParameterAttribute(Name="usersOnLine")] string[] usersOnLine1, string[] usersOffLine);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/ResultActionfromLogout")]
+        void ResultActionfromLogout();
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/ResultActionfromLogoin")]
+        void ResultActionfromLogoin(string username);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/RecievePrivateMsg")]
+        void RecievePrivateMsg(string from, string key, string content);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/PrivateChatStart")]
+        void PrivateChatStart(string userName, string opponentName);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/PrivateChatStartFromOpponent")]
+        void PrivateChatStartFromOpponent(string userName, string opponentName);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/PrivateChatSlose")]
+        void PrivateChatSlose(string opponentName);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/RequestGameFromServer")]
+        void RequestGameFromServer(string userName, string opponentName);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/StartGameFromServer")]
+        void StartGameFromServer(string userName, string opponentName, bool master);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/GameOverFromServer")]
+        void GameOverFromServer(string userName, string opponentName, bool winner);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/RecieveRoll")]
+        void RecieveRoll(string opponent, int[] numbers);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/RollEnableFromServer")]
+        void RollEnableFromServer(string user, string opponentName);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/RollDisableFromServer")]
+        void RollDisableFromServer(string user, string opponentName);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/MoveEnableFromServer")]
+        void MoveEnableFromServer(string user, string opponentName);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/GameInfoUpdateFromServer")]
+        void GameInfoUpdateFromServer(string opponentName, string content);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/SetMasterFromServer")]
+        void SetMasterFromServer(string user, string opponentName);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/SetWaiterFromServer")]
+        void SetWaiterFromServer(string user, string opponentName);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/MoveCheckerFromServer")]
+        void MoveCheckerFromServer(string user, string opponent, int currIndex, int futherIndex, bool IsbeatPiece);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/UpdateTable")]
+        void UpdateTable(string user, string opponent, int[] whiteCheckers, int[] blackCheckers, int[] barCheckers);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/StartHowToFirstFromServer")]
+        void StartHowToFirstFromServer(string userName, string opponentName);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/CloseHowToFirstFromServer")]
+        void CloseHowToFirstFromServer(string userName, string opponentName, bool winner);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/RecieveRollHowFirst")]
+        void RecieveRollHowFirst(string user, string opponent, int[] numbers);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IGameService/BackToChatFromServer")]
+        void BackToChatFromServer(string user, string opponent);
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public interface IGameServiceChannel : Client.TalkBackService.IGameService, System.ServiceModel.IClientChannel {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class GameServiceClient : System.ServiceModel.DuplexClientBase<Client.TalkBackService.IGameService>, Client.TalkBackService.IGameService {
+        
+        public GameServiceClient(System.ServiceModel.InstanceContext callbackInstance) : 
+                base(callbackInstance) {
+        }
+        
+        public GameServiceClient(System.ServiceModel.InstanceContext callbackInstance, string endpointConfigurationName) : 
+                base(callbackInstance, endpointConfigurationName) {
+        }
+        
+        public GameServiceClient(System.ServiceModel.InstanceContext callbackInstance, string endpointConfigurationName, string remoteAddress) : 
+                base(callbackInstance, endpointConfigurationName, remoteAddress) {
+        }
+        
+        public GameServiceClient(System.ServiceModel.InstanceContext callbackInstance, string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(callbackInstance, endpointConfigurationName, remoteAddress) {
+        }
+        
+        public GameServiceClient(System.ServiceModel.InstanceContext callbackInstance, System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(callbackInstance, binding, remoteAddress) {
         }
         
         public void StartGame(string userName, string opponentName, bool master) {
@@ -494,14 +618,6 @@ namespace Client.ChatServer {
         
         public System.Threading.Tasks.Task CloseHowToFirstAsync(string userName, string opponentName) {
             return base.Channel.CloseHowToFirstAsync(userName, opponentName);
-        }
-        
-        public void BackToChat(string user, string opponent) {
-            base.Channel.BackToChat(user, opponent);
-        }
-        
-        public System.Threading.Tasks.Task BackToChatAsync(string user, string opponent) {
-            return base.Channel.BackToChatAsync(user, opponent);
         }
     }
 }

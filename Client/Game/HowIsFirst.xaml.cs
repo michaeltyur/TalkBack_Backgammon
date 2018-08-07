@@ -1,4 +1,4 @@
-﻿using Client.ChatServer;
+﻿
 using Client.Game.GameData;
 using System;
 using System.Threading;
@@ -13,7 +13,9 @@ namespace Client.Game
     /// </summary>
     public partial class HowIsFirst : Window
     {
-        public ChatServiceClient Host { get; }
+        public TalkBackService.IChatService ChatHost { get; }
+        public TalkBackService.IGameService GameHost { get; }
+
         //private Backgammon _game;
         private DispatcherTimer Timer;
 
@@ -34,9 +36,9 @@ namespace Client.Game
             InitializeComponent();
             User = user;
             Opponent = opponent;
-            Title = $"Hi , {User}";
 
-            Host = ClientInstances.Instance.Chat.Host;
+            ChatHost = ClientInstances.Instance.ChatHost;
+            GameHost = ClientInstances.Instance.GameHost;
 
             Dice1 = new Dice();
             Dice2 = new Dice();
@@ -62,7 +64,7 @@ namespace Client.Game
         private void Timer_Tick(object sender, EventArgs e)
         {
             Timer.Stop();
-            Host.StartGameAsync(User, Opponent, _winner);
+            GameHost.StartGameAsync(User, Opponent, _winner);
 
             if (ClientInstances.Instance.HowFirstsList.ContainsKey(Opponent))
             {
@@ -101,7 +103,7 @@ namespace Client.Game
         //Roll Click
         private void RollButton_Click(object sender, RoutedEventArgs e)
         {          
-            Host.RollHowFirstAsync(User,Opponent);
+            GameHost.RollHowFirstAsync(User,Opponent);
             rollButton.IsEnabled = false;
         }
 
@@ -125,7 +127,7 @@ namespace Client.Game
         private void CloseButton_Click(object sender, RoutedEventArgs e)
         {
 
-            Host.BackToChat(User,Opponent);
+            ChatHost.BackToChat(User,Opponent);
 
             if (ClientInstances.Instance.HowFirstsList.ContainsKey(Opponent))
             {

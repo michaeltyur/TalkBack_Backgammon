@@ -21,13 +21,18 @@ namespace Client.Windows
     public partial class Chat : Window
     {
         public string User { get; }
-        public ChatServer.ChatServiceClient Host { get; }
+        public TalkBackService.IChatService ChatHost { get; }
+        public TalkBackService.IGameService GameHost { get; }
+
         private DispatcherTimer Timer;
 
         public Chat(string user)
         {
             InitializeComponent();
-            Host = ClientInstances.Instance.Host;
+
+            ChatHost = ClientInstances.Instance.ChatHost;
+            GameHost = ClientInstances.Instance.GameHost;
+
             User = user;
             title.Text = User;
             howToChat.Text = TopMenu.GetHelpForChat();
@@ -186,7 +191,7 @@ namespace Client.Windows
                     messageBoxResult = MessageBox.Show("Do you want to chat with your self? Ah ah ah!!!");
                 else if (ClientInstances.Instance.PrivateChats.ContainsKey(opponent))
                 {
-                    Host.SendErrorMessageAsync(opponent, "This type really wants to talk to you, write to him urgently!");
+                    ChatHost.SendErrorMessageAsync(opponent, "This type really wants to talk to you, write to him urgently!");
                     messageBoxResult = MessageBox.Show("You have already open private chat with this user.");
                 }
                 else if (opponent == Player.autoPlayer.ToString())
@@ -197,7 +202,7 @@ namespace Client.Windows
                     window.Topmost = true;
                     messageBoxResult = MessageBox.Show($"Private chat with {opponent} is open");
                 }
-                else Host.PrivateChat(User, opponent);
+                else ChatHost.PrivateChat(User, opponent);
 
                 userOnlineList.SelectedIndex = -1;
             }
@@ -216,8 +221,8 @@ namespace Client.Windows
                 else if(ClientInstances.Instance.GameList.ContainsKey(opponent))
                     messageBoxResult = MessageBox.Show("You have already open game with this user");
                 else if (opponent == Player.autoPlayer.ToString())
-                    Host.StartHowToFirstAsync(User, Player.autoPlayer.ToString());
-                else Host.RequestGameAsync(User, opponent);
+                    GameHost.StartHowToFirstAsync(User, Player.autoPlayer.ToString());
+                else GameHost.RequestGameAsync(User, opponent);
 
                 userOnlineList.SelectedIndex = -1;
             }
@@ -230,7 +235,7 @@ namespace Client.Windows
             {
                 var userName = User;
                 var content = sendTextBox.Text;
-                Host.SendMessageAsync(userName, content);
+                ChatHost.SendMessageAsync(userName, content);
                 sendTextBox.Text = string.Empty;
             }
         }
@@ -247,16 +252,16 @@ namespace Client.Windows
                     {
                         ClientInstances.Instance.GameList[key].Close();
                         ClientInstances.Instance.GameList.Remove(key);
-                        Host.UserLeftGameAsync(User, key);
+                        GameHost.UserLeftGameAsync(User, key);
                     }
                 }
                 foreach (var key in ClientInstances.Instance.PrivateChats.Keys.ToList())
                 {
                     ClientInstances.Instance.PrivateChats[key].Close();
                     ClientInstances.Instance.PrivateChats.Remove(key);//remove from private chats list
-                    Host.ExitPrivateChatAsync(User, key);
+                    ChatHost.ExitPrivateChatAsync(User, key);
                 }
-                Host.LogoutAsync(User);
+                ChatHost.LogoutAsync(User);
             }
         }
 
@@ -271,16 +276,16 @@ namespace Client.Windows
                     {
                         ClientInstances.Instance.GameList[key].Close();
                         ClientInstances.Instance.GameList.Remove(key);
-                        Host.UserLeftGameAsync(User, key);
+                        GameHost.UserLeftGameAsync(User, key);
                     }
                 }
                 foreach (var key in ClientInstances.Instance.PrivateChats.Keys.ToList())
                 {
                     ClientInstances.Instance.PrivateChats[key].Close();
                     ClientInstances.Instance.PrivateChats.Remove(key);//remove from private chats list
-                    Host.ExitPrivateChatAsync(User, key);
+                    ChatHost.ExitPrivateChatAsync(User, key);
                 }
-                Host.LogoutAsync(User);
+                ChatHost.LogoutAsync(User);
 
                 Application.Current.Shutdown();
             }

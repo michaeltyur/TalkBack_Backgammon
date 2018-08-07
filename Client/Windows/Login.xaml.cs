@@ -1,4 +1,4 @@
-﻿using Client.ChatServer;
+﻿using Client.TalkBackService;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,11 +22,12 @@ namespace Client.Windows
     public partial class Login : Window
     {
         private DispatcherTimer Timer;
-        private ChatServiceClient Host { get; }
+
+        private IChatService ChatHost { get; }
 
         public Login()
         {
-            Host = ClientInstances.Instance.Host;
+            ChatHost = ClientInstances.Instance.ChatHost;
             InitializeComponent();
 
             //Set help and about text
@@ -41,6 +42,8 @@ namespace Client.Windows
             };
             Timer.Tick += Timer_Tick;
             Show();
+            userName.Text = "afek";
+            password.Password = "123";
         }
         //Close Windows
         public void CloseLoginWindow()
@@ -82,7 +85,7 @@ namespace Client.Windows
             {
                 try
                 {
-                    Host.LoginAsync(_userName, _password);
+                    ChatHost.LoginAsync(_userName, _password);
                     ButtonsOnOff();
                 }
                 catch (Exception ex)
