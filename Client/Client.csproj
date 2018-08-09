@@ -102,8 +102,8 @@
       <DependentUpon>GameOver.xaml</DependentUpon>
     </Compile>
     <Compile Include="Game\GameFinish\GameOverImages.cs" />
-    <Compile Include="Game\HowIsFirst.xaml.cs">
-      <DependentUpon>HowIsFirst.xaml</DependentUpon>
+    <Compile Include="Game\WhoIsFirst.xaml.cs">
+      <DependentUpon>WhoIsFirst.xaml</DependentUpon>
     </Compile>
     <Compile Include="Game\UserControls\BlackUser.xaml.cs">
       <DependentUpon>BlackUser.xaml</DependentUpon>
@@ -133,7 +133,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Game\HowIsFirst.xaml">
+    <Page Include="Game\WhoIsFirst.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -8,7 +8,7 @@
         Background="LightSlateGray" WindowStyle="None" WindowStartupLocation="CenterScreen"
         MouseLeftButtonDown="MyMainWindow_MouseLeftButtonDown" ResizeMode="NoResize">
     <Border BorderBrush="DarkSlateGray" BorderThickness="2" CornerRadius="3" >
-        <Grid x:Name="howFirstGrid">
+        <Grid x:Name="whoFirstGrid">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="2*"></RowDefinition>
