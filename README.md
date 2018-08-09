@@ -1,6 +1,6 @@
 The program is written within the framework of the course .Net, based on the WCF,WPF,Entity Framework architecture. 
-user for login: 
-afek  123 
-niv  123 
-david 123 
+user for login: <br />
+afek  123 <br />
+niv  123 <br />
+david 123 <br />
  
