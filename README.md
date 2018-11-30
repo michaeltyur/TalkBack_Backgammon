@@ -9,8 +9,8 @@ david 123
 ![alt text](https://github.com/michaeltyur/TalkBack_Backgammon/blob/master/chat.PNG)
 ******
 ![alt text](https://github.com/michaeltyur/TalkBack_Backgammon/blob/master/private_chat.PNG)
-**
+***
 ![alt text](https://github.com/michaeltyur/TalkBack_Backgammon/blob/master/game1.PNG)
-**
+***
 ![alt text](https://github.com/michaeltyur/TalkBack_Backgammon/blob/master/game2.PNG)
  
