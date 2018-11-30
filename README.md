@@ -3,4 +3,6 @@ user for login:<br />
 afek  123<br />
 niv  123<br />
 david 123 
+
+![alt text](https://github.com/michaeltyur/FlightTerminalSimulator/blob/master/fly_generator.PNG)
  
