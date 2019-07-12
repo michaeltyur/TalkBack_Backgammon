@@ -16,7 +16,7 @@ namespace DAL
     {
         public ChatDbContext():base("ChatDbContext")
         {
-            Database.SetInitializer(new ChatDBInitializer());
+           // Database.SetInitializer(new ChatDBInitializer());
         }
         public DbSet<User> Users { get; set; }
 
